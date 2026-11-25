@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=24">
+  <link rel="stylesheet" href="assets/css/style.css?v=25">
   <script src="assets/js/main.js?v=3" defer></script>
 </head>
 <body>
@@ -573,56 +573,98 @@
   </div>
 </section>
 
-<!-- ================= Pricing ================= -->
+<!-- ================= Pricing (monthly/yearly switch and doctor picker work without JavaScript) ================= -->
 <section class="section section-alt" id="pricing">
   <div class="wrap">
     <div class="section-head center">
       <h2 data-ar="باقات بسيطة بالجنيه المصري">Simple plans in EGP</h2>
       <p data-ar="ابدأ صغيرًا وكبّر براحتك. كل باقة تشمل تجربة مجانية 14 يومًا.">Start small and grow. Every plan includes a free 14-day trial.</p>
     </div>
-    <div class="plans">
-      <div class="plan">
+
+    <div class="pricing">
+      <input class="sr-only price-radio" type="radio" name="bill" id="bill-m" checked>
+      <input class="sr-only price-radio" type="radio" name="bill" id="bill-y">
+      <input class="sr-only price-radio" type="radio" name="docs" id="doc-1">
+      <input class="sr-only price-radio" type="radio" name="docs" id="doc-2">
+      <input class="sr-only price-radio" type="radio" name="docs" id="doc-3">
+
+      <div class="price-ctrl">
+        <div class="seg-pill bill-pill">
+          <label for="bill-m" data-ar="شهري">Monthly</label>
+          <label for="bill-y"><span data-ar="سنوي">Yearly</span><em data-ar="شهرين مجانًا">2 months free</em></label>
+        </div>
+        <div class="doc-pick">
+          <span class="doc-q" data-ar="كام طبيب عندك؟">How many doctors?</span>
+          <div class="seg-pill doc-pill">
+            <label for="doc-1">1</label>
+            <label for="doc-2">2–4</label>
+            <label for="doc-3">5–10</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="plans">
+      <div class="plan plan-starter" style="--t1:#7C95F2;--t2:#3B5BDB">
+        <span class="p-tile plan-tile"><svg viewBox="0 0 24 24" class="ic"><path d="M6 3v6a4 4 0 0 0 8 0V3"/><path d="M10 13v2a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="11" r="2"/></svg></span>
         <h3 data-ar="الأساسية">Starter</h3>
         <p class="for" data-ar="لعيادة بطبيب واحد.">For a single-doctor clinic.</p>
-        <div class="price"><strong>450</strong><span data-ar="ج.م / شهريًا">EGP / month</span></div>
+        <div class="price pm"><strong>599</strong><span data-ar="ج.م / شهريًا">EGP / month</span></div>
+        <div class="price py"><strong>499</strong><span data-ar="ج.م / شهريًا">EGP / month</span><small data-ar="5,990 ج.م تُدفع سنويًا">5,990 EGP billed yearly</small></div>
         <ul>
           <li><svg viewBox="0 0 24 24" class="ic" style="color:var(--blue)"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="طبيب واحد">1 doctor</span></li>
           <li><svg viewBox="0 0 24 24" class="ic" style="color:var(--blue)"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="الحجوزات وملفات المرضى">Bookings and patient files</span></li>
-          <li><svg viewBox="0 0 24 24" class="ic" style="color:var(--blue)"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="روابط واتساب بجانب كل مريض">WhatsApp link beside every patient</span></li>
+          <li><svg viewBox="0 0 24 24" class="ic" style="color:var(--blue)"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="رسائل واتساب بلمسة واحدة">One-tap WhatsApp messages</span></li>
           <li><svg viewBox="0 0 24 24" class="ic" style="color:var(--blue)"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="دفتر النقدية اليومي">Daily cash book</span></li>
+          <li><svg viewBox="0 0 24 24" class="ic" style="color:var(--blue)"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="إعداد ونقل بيانات مجاني">Free setup and data move</span></li>
         </ul>
         <a class="btn btn-ghost btn-block" href="signup.html" data-ar="ابدأ التجربة المجانية">Start free trial</a>
       </div>
 
-      <div class="plan featured">
+      <div class="plan plan-clinic featured" style="--t1:#A596F4;--t2:#6450D6">
+        <span class="p-tile plan-tile"><svg viewBox="0 0 24 24" class="ic"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 6"/></svg></span>
         <h3 data-ar="العيادة">Clinic</h3>
         <p class="for" data-ar="للعيادات المزدحمة.">For busy clinics.</p>
-        <div class="price"><strong>950</strong><span data-ar="ج.م / شهريًا">EGP / month</span></div>
+        <div class="price pm"><strong>1,299</strong><span data-ar="ج.م / شهريًا">EGP / month</span></div>
+        <div class="price py"><strong>1,083</strong><span data-ar="ج.م / شهريًا">EGP / month</span><small data-ar="12,990 ج.م تُدفع سنويًا">12,990 EGP billed yearly</small></div>
         <ul>
           <li><svg viewBox="0 0 24 24" class="ic" style="color:#AFC0FA"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="حتى 4 أطباء">Up to 4 doctors</span></li>
           <li><svg viewBox="0 0 24 24" class="ic" style="color:#AFC0FA"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="كل مميزات الأساسية">Everything in Starter</span></li>
+          <li><svg viewBox="0 0 24 24" class="ic" style="color:#AFC0FA"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="تذكيرات واتساب تلقائية، 500 مريض شهريًا">Automatic WhatsApp reminders, 500 patients a month</span></li>
           <li><svg viewBox="0 0 24 24" class="ic" style="color:#AFC0FA"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="متابعة النقدي والتحويل والـPOS">Cash, transfer and POS tracking</span></li>
-          <li><svg viewBox="0 0 24 24" class="ic" style="color:#AFC0FA"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="قوالب رسائل واتساب">WhatsApp message templates</span></li>
+          <li><svg viewBox="0 0 24 24" class="ic" style="color:#AFC0FA"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="صلاحيات الموظفين وسجل الدخول">Staff roles and access history</span></li>
           <li><svg viewBox="0 0 24 24" class="ic" style="color:#AFC0FA"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="تقارير شهرية">Monthly reports</span></li>
         </ul>
         <a class="btn btn-primary btn-block" href="#demo" data-ar="اطلب عرضًا">Request a demo</a>
       </div>
 
-      <div class="plan">
+      <div class="plan plan-pro" style="--t1:#5A606C;--t2:#1F2228">
+        <span class="p-tile plan-tile"><svg viewBox="0 0 24 24" class="ic"><path d="M4 21V7l8-4 8 4v14"/><path d="M9 21v-5h6v5M12 8v4M10 10h4"/></svg></span>
         <h3 data-ar="الاحترافية">Pro</h3>
         <p class="for" data-ar="للمراكز متعددة الأطباء.">For multi-doctor centers.</p>
-        <div class="price"><strong>1,750</strong><span data-ar="ج.م / شهريًا">EGP / month</span></div>
+        <div class="price pm"><strong>2,499</strong><span data-ar="ج.م / شهريًا">EGP / month</span></div>
+        <div class="price py"><strong>2,083</strong><span data-ar="ج.م / شهريًا">EGP / month</span><small data-ar="24,990 ج.م تُدفع سنويًا">24,990 EGP billed yearly</small></div>
         <ul>
-          <li><svg viewBox="0 0 24 24" class="ic" style="color:var(--blue)"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="حتى 12 طبيبًا">Up to 12 doctors</span></li>
+          <li><svg viewBox="0 0 24 24" class="ic" style="color:var(--blue)"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="حتى 10 أطباء و3 فروع">Up to 10 doctors and 3 branches</span></li>
           <li><svg viewBox="0 0 24 24" class="ic" style="color:var(--blue)"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="كل مميزات باقة العيادة">Everything in Clinic</span></li>
-          <li><svg viewBox="0 0 24 24" class="ic" style="color:var(--blue)"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="أكثر من فرع">Multiple branches</span></li>
-          <li><svg viewBox="0 0 24 24" class="ic" style="color:var(--blue)"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="صلاحيات للموظفين">Staff roles and access</span></li>
+          <li><svg viewBox="0 0 24 24" class="ic" style="color:var(--blue)"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="تذكيرات واتساب تلقائية، 1,500 مريض شهريًا">Automatic WhatsApp reminders, 1,500 patients a month</span></li>
+          <li><svg viewBox="0 0 24 24" class="ic" style="color:var(--blue)"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="تقارير لكل فرع">Reports for every branch</span></li>
           <li><svg viewBox="0 0 24 24" class="ic" style="color:var(--blue)"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="دعم بأولوية">Priority support</span></li>
         </ul>
         <a class="btn btn-ghost btn-block" href="#demo" data-ar="تواصل معنا">Talk to us</a>
       </div>
+      </div>
+
+      <div class="price-foot">
+        <div class="save-strip">
+          <span class="p-tile save-tile" style="--t1:#45C9B8;--t2:#0E9384"><svg viewBox="0 0 24 24" class="ic"><path d="M4 7h12l-3-3M20 17H8l3 3"/></svg></span>
+          <div>
+            <b data-ar="الإعداد ونقل البيانات مجانًا في كل الباقات.">Free setup and data move on every plan.</b>
+            <span data-ar="غيرنا بيحاسب لحد 4,000 ج.م على ده.">Others charge up to 4,000 EGP for this.</span>
+          </div>
+        </div>
+        <p class="addons" data-ar="السعر للعيادة مش للطبيب. طبيب إضافي 199 ج.م · فرع إضافي 599 ج.م شهريًا.">Price per clinic, not per doctor. Extra doctor 199 EGP · Extra branch 599 EGP a month.</p>
+      </div>
     </div>
-    <p class="plans-note" data-ar="الإعداد ونقل البيانات مجانًا في كل الباقات. ادفع سنويًا واحصل على شهرين مجانًا.">Free setup and data move on every plan. Pay yearly and get 2 months free.</p>
   </div>
 </section>
 

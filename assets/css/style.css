@@ -324,7 +324,6 @@ html[lang="ar"] .art-money .amount { text-align: end; }
 .plan.featured h3, .plan.featured .price strong { color: #fff; }
 .plan.featured p, .plan.featured li, .plan.featured .price span { color: #C9CDD6; }
 .plan.featured .btn-primary { background: #fff; color: var(--ink); }
-.plans-note { text-align: center; margin-top: 36px; color: var(--muted); font-size: 15px; }
 
 /* Demo + Contact */
 .demo-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 32px; align-items: start; }
@@ -1016,3 +1015,59 @@ html[dir="rtl"] .switch input:checked + span::before { transform: translateX(-20
 .sec-big .pf { flex: 1; display: flex; flex-direction: column; }
 .sec-big .pf-row { flex: 1; }
 @media (max-width: 960px) { .sec-big .pf-row { flex: none; } }
+
+/* ---------- Pricing: monthly/yearly switch · doctor picker · plan tiles ---------- */
+.pricing { position: relative; }
+.price-radio { top: 0; left: 0; }
+.price-ctrl { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 14px 28px; margin: -12px 0 44px; }
+.seg-pill { display: inline-flex; gap: 4px; padding: 4px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; }
+.seg-pill label { display: inline-flex; align-items: center; gap: 8px; padding: 9px 18px; border-radius: 999px; font-size: 14px; font-weight: 600; color: var(--ink-2); cursor: pointer; transition: background .2s, color .2s; }
+.seg-pill label:hover { color: var(--ink); background: var(--bg); }
+.seg-pill em { font-style: normal; font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 999px; background: #E4F6F3; color: #0B6B60; }
+.doc-pick { display: inline-flex; align-items: center; gap: 12px; }
+.doc-q { font-size: 14px; font-weight: 500; color: var(--muted); }
+.doc-pill label { min-width: 52px; justify-content: center; direction: ltr; }
+#bill-m:checked ~ .price-ctrl [for="bill-m"], #bill-y:checked ~ .price-ctrl [for="bill-y"],
+#doc-1:checked ~ .price-ctrl [for="doc-1"], #doc-2:checked ~ .price-ctrl [for="doc-2"], #doc-3:checked ~ .price-ctrl [for="doc-3"] { background: var(--ink); color: #fff; }
+#bill-y:checked ~ .price-ctrl [for="bill-y"] em { background: rgba(255,255,255,.16); color: #9FE8D9; }
+#bill-m:focus-visible ~ .price-ctrl [for="bill-m"], #bill-y:focus-visible ~ .price-ctrl [for="bill-y"],
+#doc-1:focus-visible ~ .price-ctrl [for="doc-1"], #doc-2:focus-visible ~ .price-ctrl [for="doc-2"], #doc-3:focus-visible ~ .price-ctrl [for="doc-3"] { outline: 3px solid var(--blue-soft-2); outline-offset: 2px; }
+
+/* Monthly vs yearly prices */
+.price { flex-wrap: wrap; row-gap: 6px; }
+.price small { flex-basis: 100%; font-size: 13px; font-weight: 500; color: var(--muted); }
+.plan.featured .price small { color: #AEB3BD; }
+.price.py { display: none; }
+#bill-y:checked ~ .plans .price.pm { display: none; }
+#bill-y:checked ~ .plans .price.py { display: flex; }
+
+/* Plan cards */
+.plan { transition: opacity .3s ease, box-shadow .3s ease, transform .3s ease, outline-color .3s ease; outline: 3px solid transparent; outline-offset: 5px; }
+.plan-tile { margin-bottom: 20px; }
+.plan.featured .plan-tile { box-shadow: 0 16px 30px -12px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.35); }
+.plan-pro .plan-tile { --t1: #5A606C; --t2: #1F2228; }
+
+/* Doctor picker highlights the right plan */
+#doc-1:checked ~ .plans .plan-starter,
+#doc-2:checked ~ .plans .plan-clinic,
+#doc-3:checked ~ .plans .plan-pro { outline-color: var(--blue); }
+#doc-1:checked ~ .plans .plan:not(.plan-starter),
+#doc-2:checked ~ .plans .plan:not(.plan-clinic),
+#doc-3:checked ~ .plans .plan:not(.plan-pro) { opacity: .55; }
+
+/* Under the plans */
+.price-foot { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: 40px; }
+.save-strip { display: inline-flex; align-items: center; gap: 16px; padding: 14px 24px 14px 14px; border-radius: 22px; background: linear-gradient(150deg, #E4F6F3, var(--surface)); border: 1px solid var(--line); }
+html[dir="rtl"] .save-strip { padding: 14px 14px 14px 24px; }
+.save-tile { width: 52px; height: 52px; border-radius: 16px; }
+.save-tile svg { width: 24px; height: 24px; }
+.save-strip b { display: block; font-size: 16px; }
+.save-strip span:not(.p-tile) { font-size: 14px; color: var(--ink-2); }
+.addons { font-size: 14px; color: var(--muted); text-align: center; }
+
+@media (max-width: 720px) {
+  .price-ctrl { flex-direction: column; gap: 14px; margin-top: -8px; }
+  .doc-pick { flex-direction: column; gap: 8px; }
+  .seg-pill label { padding: 8px 14px; }
+  .save-strip { align-items: flex-start; }
+}

@@ -25,7 +25,7 @@ If the stylesheet or script changes, bump the `?v=` number on their links so vis
 - Email: `hello@arkclinic.com`
 - Office address: "Fifth Settlement, New Cairo"
 - The three reviews (moving strip on the home page) — these are placeholders; use real quotes with permission
-- Prices: 450 / 950 / 1,750 EGP
+- Prices: 599 / 1,299 / 2,499 EGP a month (yearly 5,990 / 12,990 / 24,990); add-ons 199 per extra doctor, 599 per extra branch. Also in `signup.html`
 - Promises in the **Privacy** section (encryption, daily backup, doctor-only notes, staff roles) and the
   **Switching is free** section (free data move, ready in 48 hours, training) — only keep what you really offer
 
