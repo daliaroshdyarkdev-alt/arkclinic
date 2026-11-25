@@ -31,8 +31,11 @@
     try { localStorage.setItem(KEY, lang); } catch (e) {}
   }
 
-  var saved = 'en';
-  try { saved = localStorage.getItem(KEY) || 'en'; } catch (e) {}
+  // First visit: Arabic for visitors whose browser is set to Arabic, English otherwise.
+  // After that, the visitor's own choice is remembered.
+  var browserLang = ((navigator.languages && navigator.languages[0]) || navigator.language || 'en').toLowerCase();
+  var saved = browserLang.indexOf('ar') === 0 ? 'ar' : 'en';
+  try { saved = localStorage.getItem(KEY) || saved; } catch (e) {}
   applyLang(saved);
 
   document.querySelectorAll('[data-lang-toggle]').forEach(function (btn) {
@@ -140,6 +143,17 @@
     place(false);
     start();
   });
+
+  // Phones: show the pinned demo button after the hero, hide it once the demo form is on screen
+  var mCta = document.querySelector('.m-cta');
+  var heroEl = document.querySelector('.hero');
+  var demoEl = document.getElementById('demo');
+  if (mCta && heroEl && demoEl && 'IntersectionObserver' in window) {
+    var heroSeen = true, demoSeen = false;
+    var update = function () { mCta.classList.toggle('show', !heroSeen && !demoSeen); };
+    new IntersectionObserver(function (e) { heroSeen = e[0].isIntersecting; update(); }).observe(heroEl);
+    new IntersectionObserver(function (e) { demoSeen = e[0].isIntersecting; update(); }, { threshold: 0.15 }).observe(demoEl);
+  }
 
   // Header border on scroll
   if (header) {

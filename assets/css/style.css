@@ -1126,3 +1126,46 @@ html[dir="rtl"] .save-strip { padding: 14px 14px 14px 24px; }
   .talk-brand { flex-wrap: wrap; }
   .talk-brand-go { width: 100%; padding-inline-start: 68px; }
 }
+
+/* =========================================================
+   Consistency fixes
+   ========================================================= */
+
+/* Reviews headline: centered and same size as every other section */
+.rv-head { flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 14px; margin-bottom: 36px; }
+.rv-head h2 { font-size: clamp(34px, 4.2vw, 52px); max-width: none; }
+
+/* Specialties: "also for…" line */
+.spec-more { margin-top: 24px; text-align: center; font-size: 15.5px; color: var(--ink-2); }
+
+/* Demo button inside the phone menu */
+.nav-demo { display: none !important; }
+@media (max-width: 860px) {
+  .nav-open .nav-links .nav-demo { display: flex !important; margin-top: 16px; padding: 15px 20px; border-bottom: 0; color: #fff; font-size: 16px; }
+}
+
+/* Phones: demo button pinned to the bottom of the screen */
+.m-cta { display: none; }
+@media (max-width: 860px) {
+  .m-cta { display: flex; position: fixed; z-index: 60; inset-inline: 16px; bottom: 16px; transform: translateY(160%); transition: transform .35s ease; box-shadow: 0 14px 34px rgba(31,34,40,.35); }
+  .m-cta.show { transform: none; }
+}
+
+/* Auth pages use the same product scene as the home page */
+.auth-art .scene { width: 100%; max-width: 600px; }
+.signup-scene { min-height: 640px; }
+.signup-scene .win { top: 96px; }
+.signup-scene .win-main { padding: 18px 20px 20px; }
+.su-row { display: flex; align-items: center; gap: 14px; padding: 10px 4px; border-top: 1px solid var(--line); }
+.win-head + .su-row { border-top: 0; }
+.su-tile { width: 40px; height: 40px; border-radius: 13px; }
+.su-tile svg { width: 19px; height: 19px; }
+.su-txt { flex: 1; font-size: 14.5px; font-weight: 600; color: var(--ink); }
+.su-row:not(.done):not(.now) .su-txt { color: var(--muted); }
+.su-row:not(.done):not(.now) .su-tile { filter: grayscale(1); opacity: .45; box-shadow: none; }
+.su-state { flex: none; font-size: 12px; font-weight: 600; }
+.su-row.done .su-state { width: 22px; height: 22px; border-radius: 50%; background: var(--teal) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / 12px no-repeat; }
+.su-row.now .su-state { padding: 3px 10px; border-radius: 999px; background: #E3F5EA; color: #1D7A46; }
+.su-progress { margin-top: 12px; }
+.signup-scene .toast { bottom: 0; inset-inline-start: auto; inset-inline-end: 4%; }
+@media (max-width: 860px) { .site-footer { padding-bottom: 104px; } }
