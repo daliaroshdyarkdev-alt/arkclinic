@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-ar="آرك كلينك — إدارة العيادات في مصر">ArkClinic — Clinic management for Egypt</title>
+  <meta name="description" content="ArkClinic helps clinics in Egypt manage bookings, WhatsApp reminders and every pound in and out — cash, transfer and POS.">
+  <link rel="icon" href="assets/img/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=13">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+
+<!-- ================= Header ================= -->
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="logo" href="index.html" aria-label="ArkClinic home">
+      <svg viewBox="0 0 90 80" fill="none" aria-hidden="true"><defs><linearGradient id="ark-pulse-1" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#7A140E"/><stop offset=".35" stop-color="#C8281A"/><stop offset=".7" stop-color="#E8571E"/><stop offset="1" stop-color="#F5A623"/></linearGradient></defs><path d="M4 56H24L31 38L40 74L48 48L53 56H62C80 56 88 32 76 16C68 6 52 4 40 10" stroke="url(#ark-pulse-1)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="40" cy="10" r="5" fill="#F5A623"/></svg>
+      <span>Ark<b>Clinic</b></span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#features" data-ar="المميزات">Features</a>
+      <a href="#specialties" data-ar="التخصصات">Specialties</a>
+      <a href="#pricing" data-ar="الأسعار">Pricing</a>
+      <a href="#privacy" data-ar="الخصوصية">Privacy</a>
+      <a href="#reviews" data-ar="آراء العملاء">Reviews</a>
+      <a href="#contact" data-ar="تواصل معنا">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="lang-btn" type="button" data-lang-toggle>عربي</button>
+      <a class="btn btn-ghost" href="login.html" data-ar="دخول">Log in</a>
+      <a class="btn btn-primary hide-sm" href="#demo" data-ar="اطلب عرضًا">Request demo</a>
+      <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" class="ic"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ================= Hero ================= -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1 data-ar="عيادتك، بهدوء<br>وتحت السيطرة.">Your clinic, calm and in control.</h1>
+      <p data-ar="الحجوزات وتذكيرات واتساب وكل جنيه في مكان واحد بسيط.">Bookings, WhatsApp reminders and every pound in one simple place.</p>
+      <a class="btn btn-primary btn-lg" href="#demo">
+        <span data-ar="اطلب عرضًا مجانيًا">Request a free demo</span>
+        <svg viewBox="0 0 24 24" class="ic flip" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <!-- Product scene (illustration — no photos needed). Patient names are dimmed on purpose. -->
+    <div class="scene" aria-hidden="true">
+      <div class="scene-blob"></div>
+      <div class="scene-dots"></div>
+
+      <div class="win">
+        <div class="win-bar"><i></i><i></i><i></i><span class="url">arkclinic.app/today</span></div>
+        <div class="win-body">
+          <div class="win-side">
+            <span class="on"><svg viewBox="0 0 24 24" class="ic"><path d="M4 11l8-6 8 6v9H4z"/><path d="M10 20v-5h4v5"/></svg></span>
+            <span><svg viewBox="0 0 24 24" class="ic"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span>
+            <span><svg viewBox="0 0 24 24" class="ic"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 6"/></svg></span>
+            <span><svg viewBox="0 0 24 24" class="ic"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z"/></svg></span>
+            <span><svg viewBox="0 0 24 24" class="ic"><rect x="3" y="6" width="18" height="13" rx="3"/><path d="M3 10.5h18M15.5 15h2.5"/></svg></span>
+          </div>
+          <div class="win-main">
+            <div class="win-head">
+              <div><strong data-ar="جدول اليوم">Today's schedule</strong><small data-ar="الأحد 24 نوفمبر · طبيبان">Sunday 24 Nov · 2 doctors</small></div>
+              <span class="mini-btn" data-ar="+ حجز جديد">+ New booking</span>
+            </div>
+            <div class="win-kpis">
+              <div><small data-ar="زيارات اليوم">Visits today</small><b>14</b></div>
+              <div><small data-ar="في الانتظار">Waiting</small><b>2</b></div>
+              <div class="dark"><small data-ar="التحصيل (ج.م)">Collected (EGP)</small><b>8,450</b></div>
+            </div>
+            <div class="appt">
+              <time>09:30</time><span class="avatar">MA</span>
+              <div class="appt-who"><span class="dim" data-ar="منى عادل">Mona Adel</span><small data-ar="كشف · د. سلمى">Check-up · Dr. Salma</small></div>
+              <span class="pill done" data-ar="تم">Done</span>
+              <span class="wa-dot"><svg viewBox="0 0 24 24"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z" fill="#25D366"/><path d="M9.3 8.7c.2-.5.5-.6.8-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.5.6c-.1.2-.2.3 0 .6.4.7 1 1.3 1.6 1.7.3.2.6.3.8.1l.6-.7c.2-.2.3-.2.5-.1l1.5.7c.3.1.4.2.4.4 0 .7-.4 1.4-1.1 1.6-.8.3-2 .2-3.6-.8-1.5-1-2.6-2.4-3-3.5-.3-.9-.1-1.9.3-2.4z" fill="#fff"/></svg></span>
+            </div>
+            <div class="appt now">
+              <time>10:00</time><span class="avatar a2">KS</span>
+              <div class="appt-who"><span class="dim" data-ar="كريم سامي">Karim Samy</span><small data-ar="استشارة · د. عمر">Follow-up · Dr. Omar</small></div>
+              <span class="pill in" data-ar="في الكشف">In clinic</span>
+              <span class="wa-dot"><svg viewBox="0 0 24 24"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z" fill="#25D366"/><path d="M9.3 8.7c.2-.5.5-.6.8-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.5.6c-.1.2-.2.3 0 .6.4.7 1 1.3 1.6 1.7.3.2.6.3.8.1l.6-.7c.2-.2.3-.2.5-.1l1.5.7c.3.1.4.2.4.4 0 .7-.4 1.4-1.1 1.6-.8.3-2 .2-3.6-.8-1.5-1-2.6-2.4-3-3.5-.3-.9-.1-1.9.3-2.4z" fill="#fff"/></svg></span>
+            </div>
+            <div class="appt">
+              <time>10:30</time><span class="avatar a3">NH</span>
+              <div class="appt-who"><span class="dim" data-ar="نور حسن">Nour Hassan</span><small data-ar="تنظيف أسنان · د. عمر">Cleaning · Dr. Omar</small></div>
+              <span class="pill wait" data-ar="في الانتظار">Waiting</span>
+              <span class="wa-dot"><svg viewBox="0 0 24 24"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z" fill="#25D366"/><path d="M9.3 8.7c.2-.5.5-.6.8-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.5.6c-.1.2-.2.3 0 .6.4.7 1 1.3 1.6 1.7.3.2.6.3.8.1l.6-.7c.2-.2.3-.2.5-.1l1.5.7c.3.1.4.2.4.4 0 .7-.4 1.4-1.1 1.6-.8.3-2 .2-3.6-.8-1.5-1-2.6-2.4-3-3.5-.3-.9-.1-1.9.3-2.4z" fill="#fff"/></svg></span>
+            </div>
+            <div class="appt">
+              <time>11:00</time><span class="avatar a4">HM</span>
+              <div class="appt-who"><span class="dim" data-ar="هنا محمود">Hana Mahmoud</span><small data-ar="كشف · د. سلمى">Check-up · Dr. Salma</small></div>
+              <span class="pill ok" data-ar="مؤكد">Confirmed</span>
+              <span class="wa-dot"><svg viewBox="0 0 24 24"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z" fill="#25D366"/><path d="M9.3 8.7c.2-.5.5-.6.8-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.5.6c-.1.2-.2.3 0 .6.4.7 1 1.3 1.6 1.7.3.2.6.3.8.1l.6-.7c.2-.2.3-.2.5-.1l1.5.7c.3.1.4.2.4.4 0 .7-.4 1.4-1.1 1.6-.8.3-2 .2-3.6-.8-1.5-1-2.6-2.4-3-3.5-.3-.9-.1-1.9.3-2.4z" fill="#fff"/></svg></span>
+            </div>
+            <div class="appt">
+              <time>11:30</time><span class="avatar">YA</span>
+              <div class="appt-who"><span class="dim" data-ar="يوسف علي">Youssef Ali</span><small data-ar="أشعة · د. عمر">X-ray · Dr. Omar</small></div>
+              <span class="pill ok" data-ar="مؤكد">Confirmed</span>
+              <span class="wa-dot"><svg viewBox="0 0 24 24"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z" fill="#25D366"/><path d="M9.3 8.7c.2-.5.5-.6.8-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.5.6c-.1.2-.2.3 0 .6.4.7 1 1.3 1.6 1.7.3.2.6.3.8.1l.6-.7c.2-.2.3-.2.5-.1l1.5.7c.3.1.4.2.4.4 0 .7-.4 1.4-1.1 1.6-.8.3-2 .2-3.6-.8-1.5-1-2.6-2.4-3-3.5-.3-.9-.1-1.9.3-2.4z" fill="#fff"/></svg></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WhatsApp reminder -->
+      <div class="float chat">
+        <div class="chat-head">
+          <span class="avatar a3">NH</span>
+          <div><span class="dim" data-ar="نور حسن">Nour Hassan</span><small data-ar="واتساب">WhatsApp</small></div>
+          <svg viewBox="0 0 24 24"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z" fill="#25D366"/><path d="M9.3 8.7c.2-.5.5-.6.8-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.5.6c-.1.2-.2.3 0 .6.4.7 1 1.3 1.6 1.7.3.2.6.3.8.1l.6-.7c.2-.2.3-.2.5-.1l1.5.7c.3.1.4.2.4.4 0 .7-.4 1.4-1.1 1.6-.8.3-2 .2-3.6-.8-1.5-1-2.6-2.4-3-3.5-.3-.9-.1-1.9.3-2.4z" fill="#fff"/></svg>
+        </div>
+        <div class="msg out"><span data-ar="أهلاً، تذكير بموعدك بكرة الساعة 10:30 مع د. عمر.">Hi, a reminder of your visit tomorrow at 10:30 with Dr. Omar.</span><span class="tick">09:12 ✓✓</span></div>
+        <div class="msg in" data-ar="شكرًا، هكون موجود.">Thanks, I'll be there.</div>
+      </div>
+
+      <!-- Money by payment method -->
+      <div class="float money">
+        <div class="donut"><div><b>8,450</b><small data-ar="ج.م">EGP</small></div></div>
+        <div class="money-legend">
+          <small data-ar="تحصيل اليوم">Collected today</small>
+          <span style="--c:#3B5BDB"><em data-ar="نقدي">Cash</em><b>4,050</b></span>
+          <span style="--c:#B4762A"><em data-ar="تحويل">Transfer</em><b>2,540</b></span>
+          <span style="--c:#0E9384"><em>POS</em><b>1,860</b></span>
+        </div>
+      </div>
+
+      <!-- Payment toast -->
+      <div class="float toast">
+        <span class="toast-ic"><svg viewBox="0 0 24 24" class="ic"><rect x="3" y="6" width="18" height="13" rx="3"/><path d="M3 10.5h18M8 15l2 2 4-4"/></svg></span>
+        <div><b data-ar="تم الدفع بالـPOS">Paid by POS</b><small data-ar="كشف · 500 ج.م">Check-up · EGP 500</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Features ================= -->
+<section class="section section-alt" id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-ar="كل ما تحتاجه عيادتك">Everything your clinic runs on</h2>
+      <p data-ar="ست أدوات بسيطة تعمل معًا من أول يوم.">Six simple tools that work together from day one.</p>
+    </div>
+    <div class="features">
+      <article class="feature" style="--t1:#7C95F2;--t2:#3B5BDB;--soft:#EEF2FF">
+        <div class="f-icon"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="10" width="34" height="31" rx="7" fill="#fff" fill-opacity=".2"/><path d="M7 19h34M16 6v8M32 6v8"/><g fill="#fff" stroke="none" opacity=".7"><rect x="13" y="24" width="5" height="4" rx="1.5"/><rect x="21.5" y="24" width="5" height="4" rx="1.5"/><rect x="30" y="24" width="5" height="4" rx="1.5"/><rect x="13" y="32" width="5" height="4" rx="1.5"/></g><circle cx="27" cy="34" r="6" fill="#fff" stroke="none"/><path d="M24.3 34.2l1.9 1.9 3.6-3.7" style="stroke:var(--t2)" stroke-width="2.2"/></svg></div>
+        <h3 data-ar="حجز سهل">Easy bookings</h3>
+        <p data-ar="شاهد يوم كل طبيب واحجز في ثوانٍ.">See every doctor's day and book in seconds.</p>
+      </article>
+      <article class="feature" style="--t1:#4FD98A;--t2:#16A34A;--soft:#E9F9EF">
+        <div class="f-icon"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M23 9c9.4 0 17 6.5 17 14.5S32.4 38 23 38c-2.2 0-4.3-.4-6.2-1L9 40.5l2-7C8.2 30.8 6 27.4 6 23.5 6 15.5 13.6 9 23 9z" fill="#fff" fill-opacity=".2"/><path d="M15 21h15M15 27h9"/><circle cx="37" cy="11" r="6" fill="#fff" stroke="none"/><path d="M37 8.4v2.8l1.8 1.1" style="stroke:var(--t2)" stroke-width="2"/></svg></div>
+        <h3 data-ar="واتساب بلمسة واحدة">WhatsApp in one tap</h3>
+        <p data-ar="أكّد وذكّر وتابع مباشرة من جدول المواعيد.">Confirm, remind and follow up right from the schedule.</p>
+      </article>
+      <article class="feature" style="--t1:#A596F4;--t2:#6450D6;--soft:#F2EFFD">
+        <div class="f-icon"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="30" height="33" rx="6" fill="#fff" fill-opacity=".2"/><rect x="17" y="5" width="14" height="8" rx="3" fill="#fff" stroke="none"/><circle cx="24" cy="23" r="5"/><path d="M15.5 36c1.5-4.3 4.8-6.8 8.5-6.8s7 2.5 8.5 6.8"/></svg></div>
+        <h3 data-ar="ملفات المرضى">Patient files</h3>
+        <p data-ar="التاريخ المرضي والزيارات والملاحظات على بُعد نقرة.">History, visits and notes, always one click away.</p>
+      </article>
+      <article class="feature" style="--t1:#E3AE6A;--t2:#B4762A;--soft:#FBF2E6">
+        <div class="f-icon"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 14l17-7 4 7" /><rect x="6" y="14" width="36" height="27" rx="7" fill="#fff" fill-opacity=".2"/><path d="M6 22h36"/><rect x="29" y="27" width="13" height="8" rx="4" fill="#fff" stroke="none"/><circle cx="34" cy="31" r="1.8" style="fill:var(--t2)" stroke="none"/></svg></div>
+        <h3 data-ar="الإيرادات والمصروفات">Money in and out</h3>
+        <p data-ar="تابع النقدي والتحويلات والـPOS بدون دفاتر.">Track cash, transfers and POS without a notebook.</p>
+      </article>
+      <article class="feature" style="--t1:#45C9B8;--t2:#0E9384;--soft:#E4F6F3">
+        <div class="f-icon"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><g opacity=".6"><path d="M9 13h30M9 24h30M9 35h30"/></g><g fill="#fff"><circle cx="30" cy="13" r="4.5"/><circle cx="17" cy="24" r="4.5"/><circle cx="33" cy="35" r="4.5"/></g></svg></div>
+        <h3 data-ar="إعداد العيادة">Clinic setup</h3>
+        <p data-ar="الأطباء والمواعيد والخدمات والأسعار، مرة واحدة.">Doctors, hours, services and prices, set once.</p>
+      </article>
+      <article class="feature" style="--t1:#5A606C;--t2:#1F2228;--soft:#F1EFEB">
+        <div class="f-icon"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><g fill="#fff" fill-opacity=".25"><rect x="9" y="30" width="7" height="10" rx="2"/><rect x="20.5" y="25" width="7" height="15" rx="2"/><rect x="32" y="20" width="7" height="20" rx="2" fill-opacity=".9"/></g><path d="M8 19l9-6 7 3 13-9"/><path d="M31 7h6v6"/></svg></div>
+        <h3 data-ar="تقارير واضحة">Clear reports</h3>
+        <p data-ar="اعرف أفضل أيامك وخدماتك وأطبائك.">Know your best days, services and doctors.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Specialties (tabs work without JavaScript) ================= -->
+<section class="section" id="specialties">
+  <div class="wrap">
+    <div class="section-head center">
+      <h2 data-ar="مصمم لتخصصك">Made for your specialty</h2>
+      <p data-ar="اختار تخصصك وشوف آرك كلينك هيناسب يومك إزاي.">Pick your field and see how ArkClinic fits your day.</p>
+    </div>
+
+    <div class="spec">
+      <input class="spec-radio sr-only" type="radio" name="spec" id="sp-dental" checked>
+      <input class="spec-radio sr-only" type="radio" name="spec" id="sp-peds">
+      <input class="spec-radio sr-only" type="radio" name="spec" id="sp-derma">
+      <input class="spec-radio sr-only" type="radio" name="spec" id="sp-obgyn">
+
+      <div class="spec-tabs">
+        <label for="sp-dental"><svg viewBox="0 0 24 24" class="ic"><path d="M7.5 3.5c-2.3 0-4 1.8-4 4.4 0 2.2.8 3.6 1.5 5.4.7 1.9.8 7.2 2.7 7.2 1.7 0 1.6-4.6 4.3-4.6s2.6 4.6 4.3 4.6c1.9 0 2-5.3 2.7-7.2.7-1.8 1.5-3.2 1.5-5.4 0-2.6-1.7-4.4-4-4.4-2 0-2.8 1.1-4.5 1.1S9.5 3.5 7.5 3.5z"/></svg><span data-ar="أسنان">Dental</span></label>
+        <label for="sp-peds"><svg viewBox="0 0 24 24" class="ic"><circle cx="12" cy="13" r="7.5"/><path d="M12 5.5c0-1.7 1.2-2.8 2.8-2.8"/><circle cx="9.3" cy="12.5" r=".6" fill="currentColor"/><circle cx="14.7" cy="12.5" r=".6" fill="currentColor"/><path d="M9.8 16c1.3 1 3.1 1 4.4 0"/></svg><span data-ar="أطفال">Pediatrics</span></label>
+        <label for="sp-derma"><svg viewBox="0 0 24 24" class="ic"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"/><path d="M18.5 15l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></svg><span data-ar="جلدية">Dermatology</span></label>
+        <label for="sp-obgyn"><svg viewBox="0 0 24 24" class="ic"><path d="M12 20.5s-7.5-4.6-7.5-10.4A4.3 4.3 0 0 1 12 7.3a4.3 4.3 0 0 1 7.5 2.8c0 5.8-7.5 10.4-7.5 10.4z"/></svg><span data-ar="نساء وتوليد">OB / GYN</span></label>
+      </div>
+
+      <div class="spec-panels">
+        <!-- Dental -->
+        <div class="spec-panel p-dental">
+          <div class="spec-text">
+            <h3 data-ar="كل سنة، كل زيارة.">Every tooth, every visit.</h3>
+            <p data-ar="سجّل العلاج على خريطة الأسنان وخطط الجلسات بالتقسيط.">Chart treatments on a tooth map and plan sessions with installments.</p>
+            <ul class="ticks">
+              <li data-ar="خريطة أسنان لكل مريض">A tooth chart for every patient</li>
+              <li data-ar="خطط علاج على أكثر من جلسة">Treatment plans over many sessions</li>
+              <li data-ar="تقسيط ومتابعة المبلغ المتبقي">Installments and remaining balance</li>
+            </ul>
+          </div>
+          <div class="spec-art" aria-hidden="true">
+            <div class="s-card">
+              <div class="s-head"><strong data-ar="خريطة الأسنان">Tooth chart</strong><span class="dim" data-ar="كريم سامي">Karim Samy</span></div>
+              <div class="teeth">
+                <i></i><i></i><i class="done"></i><i></i><i></i><i class="planned"></i><i></i><i></i>
+                <i></i><i class="now"></i><i></i><i></i><i class="done"></i><i></i><i></i><i></i>
+              </div>
+              <div class="legend-mini"><span style="--c:#0E9384" data-ar="تم">Done</span><span style="--c:#3B5BDB" data-ar="جلسة اليوم">Today</span><span style="--c:#B4762A" data-ar="مخطط">Planned</span></div>
+            </div>
+            <div class="s-float s-float-a">
+              <small data-ar="علاج عصب">Root canal</small>
+              <b data-ar="الجلسة 2 من 3">Session 2 of 3</b>
+              <div class="progress"><i style="width:66%"></i></div>
+            </div>
+            <div class="s-float s-float-b">
+              <small data-ar="المتبقي">Remaining</small>
+              <b data-ar="1,500 ج.م">EGP 1,500</b>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pediatrics -->
+        <div class="spec-panel p-peds">
+          <div class="spec-text">
+            <h3 data-ar="متابعة النمو في مواعيدها.">Growing up, on schedule.</h3>
+            <p data-ar="التطعيمات والنمو وتذكيرات الأهل في مكان واحد.">Vaccines, growth and parents' reminders in one place.</p>
+            <ul class="ticks">
+              <li data-ar="جدول تطعيمات مع تذكير الأهل على واتساب">Vaccine schedule with WhatsApp reminders to parents</li>
+              <li data-ar="منحنى الوزن والطول">Weight and height growth chart</li>
+              <li data-ar="ملفات الإخوة على رقم ولي أمر واحد">Siblings under one parent's number</li>
+            </ul>
+          </div>
+          <div class="spec-art" aria-hidden="true">
+            <div class="s-card">
+              <div class="s-head"><strong data-ar="التطعيمات">Vaccines</strong><span class="dim" data-ar="ليلى إبراهيم">Laila Ibrahim</span></div>
+              <div class="vax"><span class="ok"></span><b data-ar="شهرين">2 months</b><em data-ar="تم">Done</em></div>
+              <div class="vax"><span class="ok"></span><b data-ar="4 شهور">4 months</b><em data-ar="تم">Done</em></div>
+              <div class="vax due"><span></span><b data-ar="6 شهور">6 months</b><em data-ar="3 ديسمبر">Due 3 Dec</em></div>
+              <div class="vax off"><span></span><b data-ar="9 شهور">9 months</b><em data-ar="مارس">March</em></div>
+            </div>
+            <div class="s-float s-float-a">
+              <small data-ar="الوزن">Weight</small>
+              <svg viewBox="0 0 120 44" class="growth"><path d="M4 40 C30 34 50 22 70 17 S104 8 116 5" fill="none" stroke="#DCE4FD" stroke-width="10" stroke-linecap="round"/><path d="M4 40 C30 34 50 22 70 17 S104 8 116 5" fill="none" stroke="#3B5BDB" stroke-width="2.5" stroke-linecap="round"/><circle cx="116" cy="5" r="4" fill="#3B5BDB"/></svg>
+            </div>
+            <div class="s-float s-float-b wa-note">
+              <svg viewBox="0 0 24 24"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z" fill="#25D366"/></svg>
+              <span data-ar="تم تذكير ولي الأمر">Parent reminded</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dermatology -->
+        <div class="spec-panel p-derma">
+          <div class="spec-text">
+            <h3 data-ar="شوف التحسن جلسة بجلسة.">See the progress, session by session.</h3>
+            <p data-ar="صور قبل وبعد، وباقات جلسات، ومتابعات.">Before and after photos, session packages and follow-ups.</p>
+            <ul class="ticks">
+              <li data-ar="صور قبل وبعد في ملف المريض">Before and after photos in the patient file</li>
+              <li data-ar="باقات الليزر والجلسات">Laser and session packages</li>
+              <li data-ar="رسائل متابعة تلقائية">Automatic follow-up messages</li>
+            </ul>
+          </div>
+          <div class="spec-art" aria-hidden="true">
+            <div class="s-card">
+              <div class="s-head"><strong data-ar="قبل وبعد">Before and after</strong><span class="dim" data-ar="هنا محمود">Hana Mahmoud</span></div>
+              <div class="ba">
+                <div class="ph before"><small data-ar="قبل">Before</small></div>
+                <div class="ph after"><small data-ar="بعد">After</small></div>
+              </div>
+            </div>
+            <div class="s-float s-float-a">
+              <small data-ar="باقة ليزر">Laser package</small>
+              <b data-ar="الجلسة 4 من 6">Session 4 of 6</b>
+              <div class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- OB / GYN -->
+        <div class="spec-panel p-obgyn">
+          <div class="spec-text">
+            <h3 data-ar="معاها أسبوع بأسبوع.">With her, week by week.</h3>
+            <p data-ar="متابعة الحمل وموعد الولادة وملاحظات السونار.">Pregnancy follow-up, due dates and ultrasound notes.</p>
+            <ul class="ticks">
+              <li data-ar="حساب أسبوع الحمل وموعد الولادة">Pregnancy week and due date, calculated</li>
+              <li data-ar="خطة زيارات لكل مرحلة">A visit plan for every trimester</li>
+              <li data-ar="ملاحظات وتقارير السونار">Ultrasound notes and reports</li>
+            </ul>
+          </div>
+          <div class="spec-art" aria-hidden="true">
+            <div class="s-card preg">
+              <div class="s-head"><strong data-ar="متابعة الحمل">Pregnancy</strong><span class="dim" data-ar="مريم خالد">Mariam Khaled</span></div>
+              <div class="preg-row">
+                <div class="ring-prog"><div><b>24</b><small data-ar="أسبوع">weeks</small></div></div>
+                <div class="preg-info">
+                  <small data-ar="موعد الولادة المتوقع">Expected due date</small>
+                  <b data-ar="12 مارس 2027">12 Mar 2027</b>
+                  <div class="tri"><i class="on"></i><i class="half"></i><i></i></div>
+                  <div class="tri-lbl"><span data-ar="الأول">1st</span><span data-ar="الثاني">2nd</span><span data-ar="الثالث">3rd</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="s-float s-float-a">
+              <small data-ar="الزيارة القادمة">Next visit</small>
+              <b data-ar="سونار · 8 ديسمبر">Ultrasound · 8 Dec</b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= How it helps ================= -->
+<section class="section section-alt" id="how">
+  <div class="wrap">
+    <div class="section-head center">
+      <h2 data-ar="يوم أهدأ من البداية للنهاية">A smoother day, start to finish</h2>
+      <p data-ar="من أول مكالمة حتى آخر دفعة.">From the first call to the last payment.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-art"><svg viewBox="0 0 24 24" class="ic"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M9 15.5l2 2 4-4"/></svg></div>
+        <h3 data-ar="احجز">Book</h3>
+        <p data-ar="أضف الزيارة في ثوانٍ بدون تعارض في المواعيد.">Add the visit in seconds, with no double booking.</p>
+      </div>
+      <div class="step">
+        <div class="step-art" style="color:var(--wa-ink)"><svg viewBox="0 0 24 24" class="ic"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z"/><path d="M12 8v4l2.5 1.5"/></svg></div>
+        <h3 data-ar="ذكّر">Remind</h3>
+        <p data-ar="لمسة واحدة ترسل تذكيرًا للمريض على واتساب.">One tap sends the patient a WhatsApp reminder.</p>
+      </div>
+      <div class="step">
+        <div class="step-art"><svg viewBox="0 0 24 24" class="ic"><rect x="3" y="6" width="18" height="13" rx="3"/><circle cx="12" cy="12.5" r="2.5"/><path d="M6.5 9.5v6M17.5 9.5v6"/></svg></div>
+        <h3 data-ar="حصّل">Get paid</h3>
+        <p data-ar="سجّل النقدي أو التحويل أو POS وشاهد إجمالي اليوم.">Log cash, transfer or POS and see the day's total.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Key numbers ================= -->
+<section class="numbers" aria-label="Key numbers">
+  <div class="wrap">
+    <h2 data-ar="عيادات في كل مصر تثق بنا">Trusted by clinics across Egypt</h2>
+    <div class="stat-grid">
+      <div class="stat"><strong>150+</strong><span data-ar="عيادة تستخدم آرك كلينك">clinics on ArkClinic</span></div>
+      <div class="stat"><strong>40K</strong><span data-ar="حجز كل شهر">bookings every month</span></div>
+      <div class="stat"><strong>35%</strong><span data-ar="غياب أقل للمرضى">fewer missed visits</span></div>
+      <div class="stat"><strong>4.9</strong><span data-ar="متوسط تقييم العملاء">average clinic rating</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Reviews ================= -->
+<section class="section" id="reviews">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-ar="يحبه الأطباء وفريق الاستقبال">Loved by doctors and front desks</h2>
+      <p data-ar="كلمات من عيادات انتقلت إلى آرك كلينك.">Words from clinics that made the switch.</p>
+    </div>
+    <div class="reviews">
+      <figure class="review">
+        <div class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></div>
+        <blockquote data-ar="«قلّ الغياب من أول شهر. تذكيرات واتساب وحدها تستاهل الاشتراك.»">“Missed visits dropped in the first month. The WhatsApp reminders alone paid for it.”</blockquote>
+        <figcaption class="who"><span class="avatar">HM</span><div><strong data-ar="د. هاني مصطفى">Dr. Hany Mostafa</strong><span data-ar="عيادة أسنان، مدينة نصر">Dental clinic, Nasr City</span></div></figcaption>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></div>
+        <blockquote data-ar="«بقفل اليوم في خمس دقايق. النقدي وإنستاباي والـPOS كله مظبوط.»">“I close the day in five minutes. Cash, InstaPay and POS all add up.”</blockquote>
+        <figcaption class="who"><span class="avatar a2">RF</span><div><strong data-ar="ريم فتحي">Reem Fathy</strong><span data-ar="مديرة عيادة، الإسكندرية">Clinic manager, Alexandria</span></div></figcaption>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></div>
+        <blockquote data-ar="«سهل لدرجة إن موظفة الاستقبال اشتغلت عليه من أول يوم. هادي ونضيف وسريع.»">“Simple enough for our receptionist on day one. Calm, clean and fast.”</blockquote>
+        <figcaption class="who"><span class="avatar a3">SE</span><div><strong data-ar="د. سارة السيد">Dr. Sara El-Sayed</strong><span data-ar="عيادة أطفال، المنصورة">Pediatric clinic, Mansoura</span></div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Patient privacy ================= -->
+<section class="section section-alt" id="privacy">
+  <div class="wrap trust">
+    <div class="trust-art" aria-hidden="true">
+      <div class="trust-glow"></div>
+      <svg class="shield" viewBox="0 0 160 180" fill="none">
+        <defs><linearGradient id="shg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7C95F2"/><stop offset="1" stop-color="#2E48B5"/></linearGradient></defs>
+        <path d="M80 8l62 22v50c0 42-27 74-62 92C45 154 18 122 18 80V30z" fill="url(#shg)"/>
+        <path d="M80 22l48 17v41c0 33-20 59-48 75-28-16-48-42-48-75V39z" fill="#fff" fill-opacity=".12"/>
+        <rect x="56" y="78" width="48" height="40" rx="9" fill="#fff"/>
+        <path d="M66 78v-9a14 14 0 0 1 28 0v9" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="80" cy="95" r="5" fill="#2E48B5"/><path d="M80 99v8" stroke="#2E48B5" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <div class="t-chip t1"><svg viewBox="0 0 24 24" class="ic"><rect x="5" y="10" width="14" height="10" rx="2.5"/><path d="M8 10V7.5a4 4 0 0 1 8 0V10"/></svg><span data-ar="مشفّرة">Encrypted</span></div>
+      <div class="t-chip t2"><svg viewBox="0 0 24 24" class="ic"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg><span data-ar="نسخة احتياطية يومية">Daily backup</span></div>
+      <div class="t-note">
+        <div class="t-note-head"><strong data-ar="التشخيص">Diagnosis</strong><span class="lock-badge"><svg viewBox="0 0 24 24" class="ic"><rect x="5" y="10" width="14" height="10" rx="2.5"/><path d="M8 10V7.5a4 4 0 0 1 8 0V10"/></svg><span data-ar="للطبيب فقط">Doctor only</span></span></div>
+        <i style="width:92%"></i><i style="width:74%"></i><i style="width:58%"></i>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-head" style="margin-bottom:36px">
+        <h2 data-ar="أسرار مرضاك في أمان">Your patients' secrets stay safe</h2>
+        <p data-ar="بيانات المرضى خاصة من الأساس، وإنت بس اللي تحدد مين يشوفها.">Patient data is private by design, and only you decide who sees it.</p>
+      </div>
+      <div class="trust-grid">
+        <div class="t-item">
+          <span class="t-ic"><svg viewBox="0 0 24 24" class="ic"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><rect x="9" y="13" width="6" height="5" rx="1.2"/><path d="M10.3 13v-1.2a1.7 1.7 0 0 1 3.4 0V13"/></svg></span>
+          <h3 data-ar="ملاحظات للطبيب فقط">Doctor-only notes</h3>
+          <p data-ar="التشخيص والملاحظات مخفية عن الاستقبال.">Diagnosis and notes are hidden from reception.</p>
+        </div>
+        <div class="t-item">
+          <span class="t-ic"><svg viewBox="0 0 24 24" class="ic"><path d="M12 3l7.5 2.7v5.6c0 4.6-3.1 8.2-7.5 9.7-4.4-1.5-7.5-5.1-7.5-9.7V5.7z"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <h3 data-ar="مشفّرة وخاصة">Encrypted and private</h3>
+          <p data-ar="بياناتك مشفّرة ولا تُشارك أو تُباع أبدًا.">Your data is encrypted and never shared or sold.</p>
+        </div>
+        <div class="t-item">
+          <span class="t-ic"><svg viewBox="0 0 24 24" class="ic"><ellipse cx="12" cy="6" rx="7" ry="2.8"/><path d="M5 6v6c0 1.5 3.1 2.8 7 2.8s7-1.3 7-2.8V6M5 12v6c0 1.5 3.1 2.8 7 2.8s7-1.3 7-2.8v-6"/></svg></span>
+          <h3 data-ar="نسخة احتياطية يومية">Daily backup</h3>
+          <p data-ar="مفيش حاجة بتضيع، حتى لو الجهاز ضاع.">Nothing is lost, even if a device is.</p>
+        </div>
+        <div class="t-item">
+          <span class="t-ic"><svg viewBox="0 0 24 24" class="ic"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M17 11l1.5 1.5L21.5 9.5"/></svg></span>
+          <h3 data-ar="صلاحيات واضحة">Clear staff roles</h3>
+          <p data-ar="كل شخص يشوف اللي شغله محتاجه بس.">Each person sees only what their job needs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Free setup / switching ================= -->
+<section class="section" id="switch">
+  <div class="wrap">
+    <div class="switch-box">
+      <div class="switch-top">
+        <div>
+          <h2 data-ar="الانتقال مجاني.<br>وإحنا اللي هنشتغل.">Switching is free.<br>We do the work.</h2>
+          <p data-ar="ابعتلنا الدفتر أو شيت الإكسل، وعيادتك تبقى جاهزة خلال 48 ساعة.">Send us your notebook or Excel sheet, and your clinic is ready in 48 hours.</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary btn-lg" href="#demo" data-ar="اطلب عرضًا">Request a demo</a>
+            <a class="btn btn-ghost btn-lg" href="#pricing" data-ar="شاهد الأسعار">See pricing</a>
+          </div>
+        </div>
+
+        <div class="move-art" aria-hidden="true">
+          <div class="sources">
+            <div class="src"><span class="src-ic" style="background:#F6EBDD;color:#8A5A1E"><svg viewBox="0 0 24 24" class="ic"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11M9 8h6"/></svg></span><span data-ar="دفتر ورقي">Paper notebook</span></div>
+            <div class="src"><span class="src-ic" style="background:#E3F5EA;color:#1D7A46"><svg viewBox="0 0 24 24" class="ic"><rect x="4" y="4" width="16" height="16" rx="2.5"/><path d="M4 10h16M4 15h16M10 4v16"/></svg></span><span data-ar="شيت إكسل">Excel sheet</span></div>
+            <div class="src"><span class="src-ic" style="background:#EEF0F3;color:#5A606B"><svg viewBox="0 0 24 24" class="ic"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><span data-ar="برنامج قديم">Old software</span></div>
+          </div>
+          <svg class="flow" viewBox="0 0 80 160" fill="none" preserveAspectRatio="none"><path d="M2 24 C40 24 40 80 78 80 M2 80 H78 M2 136 C40 136 40 80 78 80" stroke="#9FB2F2" stroke-width="2" stroke-dasharray="5 6"/></svg>
+          <div class="dest">
+            <svg viewBox="0 0 90 80" fill="none" aria-hidden="true" class="dest-logo"><defs><linearGradient id="ark-pulse-2" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#7A140E"/><stop offset=".35" stop-color="#C8281A"/><stop offset=".7" stop-color="#E8571E"/><stop offset="1" stop-color="#F5A623"/></linearGradient></defs><path d="M4 56H24L31 38L40 74L48 48L53 56H62C80 56 88 32 76 16C68 6 52 4 40 10" stroke="url(#ark-pulse-2)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="40" cy="10" r="5" fill="#F5A623"/></svg>
+            <b data-ar="1,240 مريض">1,240 patients</b>
+            <small data-ar="تم النقل بنجاح">moved safely</small>
+            <div class="progress"><i style="width:100%;background:var(--teal)"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="promises">
+        <div class="promise">
+          <span class="p-ic"><svg viewBox="0 0 24 24" class="ic"><path d="M4 7h12l-3-3M20 17H8l3 3"/></svg></span>
+          <div><h3 data-ar="نقل بياناتك مجانًا">Free data move</h3><p data-ar="المرضى والزيارات والمتبقي، فريقنا بينقلهم.">Patients, visits and balances, moved by our team.</p></div>
+        </div>
+        <div class="promise">
+          <span class="p-ic"><svg viewBox="0 0 24 24" class="ic"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span>
+          <div><h3 data-ar="جاهزة خلال 48 ساعة">Ready in 48 hours</h3><p data-ar="الأطباء والمواعيد والخدمات والأسعار متظبطة لك.">Doctors, hours, services and prices set up for you.</p></div>
+        </div>
+        <div class="promise">
+          <span class="p-ic"><svg viewBox="0 0 24 24" class="ic"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M9 9l2 2 4-4"/></svg></span>
+          <div><h3 data-ar="تدريب لفريقك">Training for your team</h3><p data-ar="جلسة مباشرة لموظفة الاستقبال، بالعربي.">A live session for your receptionist, in Arabic.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Pricing ================= -->
+<section class="section section-alt" id="pricing">
+  <div class="wrap">
+    <div class="section-head center">
+      <h2 data-ar="باقات بسيطة بالجنيه المصري">Simple plans in EGP</h2>
+      <p data-ar="ابدأ صغيرًا وكبّر براحتك. كل باقة تشمل تجربة مجانية 14 يومًا.">Start small and grow. Every plan includes a free 14-day trial.</p>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <h3 data-ar="الأساسية">Starter</h3>
+        <p class="for" data-ar="لعيادة بطبيب واحد.">For a single-doctor clinic.</p>
+        <div class="price"><strong>450</strong><span data-ar="ج.م / شهريًا">EGP / month</span></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" class="ic" style="color:var(--blue)"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="طبيب واحد">1 doctor</span></li>
+          <li><svg viewBox="0 0 24 24" class="ic" style="color:var(--blue)"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="الحجوزات وملفات المرضى">Bookings and patient files</span></li>
+          <li><svg viewBox="0 0 24 24" class="ic" style="color:var(--blue)"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="روابط واتساب بجانب كل مريض">WhatsApp link beside every patient</span></li>
+          <li><svg viewBox="0 0 24 24" class="ic" style="color:var(--blue)"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="دفتر النقدية اليومي">Daily cash book</span></li>
+        </ul>
+        <a class="btn btn-ghost btn-block" href="signup.html" data-ar="ابدأ التجربة المجانية">Start free trial</a>
+      </div>
+
+      <div class="plan featured">
+        <h3 data-ar="العيادة">Clinic</h3>
+        <p class="for" data-ar="للعيادات المزدحمة.">For busy clinics.</p>
+        <div class="price"><strong>950</strong><span data-ar="ج.م / شهريًا">EGP / month</span></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" class="ic" style="color:#AFC0FA"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="حتى 4 أطباء">Up to 4 doctors</span></li>
+          <li><svg viewBox="0 0 24 24" class="ic" style="color:#AFC0FA"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="كل مميزات الأساسية">Everything in Starter</span></li>
+          <li><svg viewBox="0 0 24 24" class="ic" style="color:#AFC0FA"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="متابعة النقدي والتحويل والـPOS">Cash, transfer and POS tracking</span></li>
+          <li><svg viewBox="0 0 24 24" class="ic" style="color:#AFC0FA"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="قوالب رسائل واتساب">WhatsApp message templates</span></li>
+          <li><svg viewBox="0 0 24 24" class="ic" style="color:#AFC0FA"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="تقارير شهرية">Monthly reports</span></li>
+        </ul>
+        <a class="btn btn-primary btn-block" href="#demo" data-ar="اطلب عرضًا">Request a demo</a>
+      </div>
+
+      <div class="plan">
+        <h3 data-ar="الاحترافية">Pro</h3>
+        <p class="for" data-ar="للمراكز متعددة الأطباء.">For multi-doctor centers.</p>
+        <div class="price"><strong>1,750</strong><span data-ar="ج.م / شهريًا">EGP / month</span></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" class="ic" style="color:var(--blue)"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="حتى 12 طبيبًا">Up to 12 doctors</span></li>
+          <li><svg viewBox="0 0 24 24" class="ic" style="color:var(--blue)"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="كل مميزات باقة العيادة">Everything in Clinic</span></li>
+          <li><svg viewBox="0 0 24 24" class="ic" style="color:var(--blue)"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="أكثر من فرع">Multiple branches</span></li>
+          <li><svg viewBox="0 0 24 24" class="ic" style="color:var(--blue)"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="صلاحيات للموظفين">Staff roles and access</span></li>
+          <li><svg viewBox="0 0 24 24" class="ic" style="color:var(--blue)"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-ar="دعم بأولوية">Priority support</span></li>
+        </ul>
+        <a class="btn btn-ghost btn-block" href="#demo" data-ar="تواصل معنا">Talk to us</a>
+      </div>
+    </div>
+    <p class="plans-note" data-ar="الإعداد ونقل البيانات مجانًا في كل الباقات. ادفع سنويًا واحصل على شهرين مجانًا.">Free setup and data move on every plan. Pay yearly and get 2 months free.</p>
+  </div>
+</section>
+
+<!-- ================= Demo + Contact ================= -->
+<section class="section" id="demo">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-ar="شاهد آرك كلينك في عيادتك">See ArkClinic in your clinic</h2>
+      <p data-ar="احجز عرضًا مجانيًا لمدة 20 دقيقة. هنكلمك على واتساب.">Book a free 20-minute demo. We'll reach you on WhatsApp.</p>
+    </div>
+
+    <div class="demo-grid">
+      <!-- Works as-is on Netlify. On other hosts, replace action with your form service URL (e.g. Formspree). -->
+      <form class="card" name="demo" method="POST" action="thanks.html" data-netlify="true">
+        <input type="hidden" name="form-name" value="demo">
+        <div class="form-grid">
+          <div class="field">
+            <label for="d-name" data-ar="اسمك">Your name</label>
+            <input id="d-name" name="name" type="text" required autocomplete="name" placeholder="Dr. Ahmed Kamal" data-ar-ph="د. أحمد كمال">
+          </div>
+          <div class="field">
+            <label for="d-clinic" data-ar="اسم العيادة">Clinic name</label>
+            <input id="d-clinic" name="clinic" type="text" required placeholder="Smile Dental Clinic" data-ar-ph="عيادة سمايل للأسنان">
+          </div>
+          <div class="field">
+            <label for="d-phone" data-ar="رقم واتساب">WhatsApp number</label>
+            <input id="d-phone" name="phone" type="tel" required autocomplete="tel" placeholder="010 0000 0000">
+          </div>
+          <div class="field">
+            <label for="d-city" data-ar="المدينة">City</label>
+            <select id="d-city" name="city">
+              <option data-ar="القاهرة">Cairo</option>
+              <option data-ar="الجيزة">Giza</option>
+              <option data-ar="الإسكندرية">Alexandria</option>
+              <option data-ar="المنصورة">Mansoura</option>
+              <option data-ar="طنطا">Tanta</option>
+              <option data-ar="أسيوط">Assiut</option>
+              <option data-ar="مدينة أخرى">Other city</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="d-docs" data-ar="عدد الأطباء">Number of doctors</label>
+            <select id="d-docs" name="doctors">
+              <option data-ar="طبيب واحد">1 doctor</option>
+              <option data-ar="من 2 إلى 4 أطباء">2 to 4 doctors</option>
+              <option data-ar="5 أطباء أو أكثر">5 doctors or more</option>
+            </select>
+          </div>
+          <div class="full">
+            <button class="btn btn-primary btn-lg btn-block" type="submit" data-ar="اطلب العرض المجاني">Request my free demo</button>
+          </div>
+        </div>
+      </form>
+
+      <div id="contact">
+        <h3 class="contact-title" data-ar="تواصل معنا">Talk to us</h3>
+        <p class="contact-sub" data-ar="بنرد خلال ساعة، من السبت إلى الخميس.">We reply within the hour, Saturday to Thursday.</p>
+        <div class="contact-list">
+          <a class="contact-item" href="https://wa.me/201000000000" target="_blank" rel="noopener">
+            <span class="icon" style="background:#E7F9EE"><svg viewBox="0 0 24 24"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z" fill="#25D366"/><path d="M9.3 8.7c.2-.5.5-.6.8-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.5.6c-.1.2-.2.3 0 .6.4.7 1 1.3 1.6 1.7.3.2.6.3.8.1l.6-.7c.2-.2.3-.2.5-.1l1.5.7c.3.1.4.2.4.4 0 .7-.4 1.4-1.1 1.6-.8.3-2 .2-3.6-.8-1.5-1-2.6-2.4-3-3.5-.3-.9-.1-1.9.3-2.4z" fill="#fff"/></svg></span>
+            <div><strong data-ar="واتساب">WhatsApp</strong><span class="ltr">+20 100 000 0000</span></div>
+          </a>
+          <a class="contact-item" href="tel:+20200000000">
+            <span class="icon"><svg viewBox="0 0 24 24" class="ic"><path d="M5 4h3.5l1.5 4-2.2 1.4a11 11 0 0 0 4.8 4.8L14 12l4 1.5V17a2 2 0 0 1-2 2A13 13 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>
+            <div><strong data-ar="اتصل بنا">Call us</strong><span class="ltr">+20 2 0000 0000</span></div>
+          </a>
+          <a class="contact-item" href="mailto:hello@arkclinic.com">
+            <span class="icon"><svg viewBox="0 0 24 24" class="ic"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg></span>
+            <div><strong data-ar="البريد الإلكتروني">Email</strong><span class="ltr">hello@arkclinic.com</span></div>
+          </a>
+          <div class="contact-item">
+            <span class="icon"><svg viewBox="0 0 24 24" class="ic"><path d="M12 21s7-6.2 7-11.5a7 7 0 0 0-14 0C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+            <div><strong data-ar="مكتبنا">Our office</strong><span data-ar="التجمع الخامس، القاهرة الجديدة">Fifth Settlement, New Cairo</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= Footer ================= -->
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <a class="logo" href="index.html">
+      <svg viewBox="0 0 90 80" fill="none" aria-hidden="true"><defs><linearGradient id="ark-pulse-3" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#7A140E"/><stop offset=".35" stop-color="#C8281A"/><stop offset=".7" stop-color="#E8571E"/><stop offset="1" stop-color="#F5A623"/></linearGradient></defs><path d="M4 56H24L31 38L40 74L48 48L53 56H62C80 56 88 32 76 16C68 6 52 4 40 10" stroke="url(#ark-pulse-3)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="40" cy="10" r="5" fill="#F5A623"/></svg>
+      <span class="logo-stack">Ark<b>Clinic</b><small>by Arkdev</small></span>
+    </a>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="#features" data-ar="المميزات">Features</a>
+      <a href="#pricing" data-ar="الأسعار">Pricing</a>
+      <a href="#demo" data-ar="اطلب عرضًا">Request demo</a>
+      <a href="login.html" data-ar="دخول العيادات">Clinic login</a>
+    </nav>
+    <p class="copy" data-ar="© 2026 آرك كلينك. صُنع في مصر.">© 2026 ArkClinic. Made in Egypt.</p>
+  </div>
+</footer>
+
+</body>
+</html>

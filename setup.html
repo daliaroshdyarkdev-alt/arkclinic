@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-ar="إعداد العيادة — آرك كلينك">Clinic setup — ArkClinic</title>
+  <link rel="icon" href="assets/img/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=13">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+<div class="app">
+
+  <!-- ============ Sidebar menu ============ -->
+  <aside class="sidebar">
+    <a class="logo" href="dashboard.html" aria-label="ArkClinic">
+      <svg viewBox="0 0 90 80" fill="none" aria-hidden="true"><defs><linearGradient id="ark-pulse-1" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#7A140E"/><stop offset=".35" stop-color="#C8281A"/><stop offset=".7" stop-color="#E8571E"/><stop offset="1" stop-color="#F5A623"/></linearGradient></defs><path d="M4 56H24L31 38L40 74L48 48L53 56H62C80 56 88 32 76 16C68 6 52 4 40 10" stroke="url(#ark-pulse-1)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="40" cy="10" r="5" fill="#F5A623"/></svg>
+      <span>Ark<b>Clinic</b></span>
+    </a>
+    <nav class="side-nav" aria-label="App">
+      <a href="dashboard.html"><svg viewBox="0 0 24 24" class="ic"><path d="M4 11l8-6 8 6v9H4z"/><path d="M10 20v-5h4v5"/></svg><span data-ar="اليوم">Today</span></a>
+      <a class="hide-sm" href="dashboard.html#schedule"><svg viewBox="0 0 24 24" class="ic"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span data-ar="المواعيد">Appointments</span></a>
+      <a class="hide-sm" href="dashboard.html#schedule"><svg viewBox="0 0 24 24" class="ic"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 6"/></svg><span data-ar="المرضى">Patients</span></a>
+      <a href="setup.html#messages"><svg viewBox="0 0 24 24" class="ic"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z"/><path d="M9 10h6M9 13.5h4"/></svg><span data-ar="الرسائل">Messages</span></a>
+      <a href="finance.html"><svg viewBox="0 0 24 24" class="ic"><rect x="3" y="6" width="18" height="13" rx="3"/><path d="M3 10.5h18M15.5 15h2.5"/></svg><span data-ar="الحسابات">Finance</span></a>
+      <div class="sep"></div>
+      <a class="active" href="setup.html"><svg viewBox="0 0 24 24" class="ic"><path d="M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/></svg><span data-ar="إعداد العيادة">Clinic setup</span></a>
+    </nav>
+    <div class="side-foot">
+      <div class="side-help">
+        <strong data-ar="محتاج مساعدة؟">Need a hand?</strong>
+        <p data-ar="فريقنا متاح على واتساب.">Our team is on WhatsApp.</p>
+        <a class="btn btn-wa" href="https://wa.me/201000000000" target="_blank" rel="noopener" data-ar="كلّم الدعم">Chat with support</a>
+      </div>
+      <nav class="side-nav"><a href="index.html"><svg viewBox="0 0 24 24" class="ic flip"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 16l-4-4 4-4M6 12h10"/></svg><span data-ar="تسجيل الخروج">Log out</span></a></nav>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <label class="search">
+        <span class="sr-only">Search</span>
+        <svg viewBox="0 0 24 24" class="ic"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input type="search" placeholder="Search settings" data-ar-ph="ابحث في الإعدادات">
+      </label>
+      <div class="spacer"></div>
+      <button class="lang-btn" type="button" data-lang-toggle>عربي</button>
+      <button class="icon-btn" type="button" aria-label="Notifications"><svg viewBox="0 0 24 24" class="ic"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15zM10 20.5h4"/></svg></button>
+      <div class="me"><span class="avatar">SN</span><span data-ar="د. سلمى نبيل">Dr. Salma Nabil</span></div>
+    </header>
+
+    <main class="page">
+      <div class="page-head">
+        <div>
+          <h1 data-ar="إعداد عيادتك">Set up your clinic</h1>
+          <p data-ar="املأها مرة واحدة، وآرك كلينك يكمل الباقي.">Fill these in once and ArkClinic does the rest.</p>
+        </div>
+        <a class="btn btn-primary btn-lg" href="dashboard.html">
+          <svg viewBox="0 0 24 24" class="ic"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+          <span data-ar="حفظ التغييرات">Save changes</span>
+        </a>
+      </div>
+
+      <div class="setup-layout">
+        <nav class="setup-nav" aria-label="Setup sections">
+          <a href="#details" data-ar="بيانات العيادة">Clinic details</a>
+          <a href="#doctors" data-ar="الأطباء والموظفين">Doctors and staff</a>
+          <a href="#hours" data-ar="مواعيد العمل">Working hours</a>
+          <a href="#services" data-ar="الخدمات والأسعار">Services and prices</a>
+          <a href="#payments" data-ar="طرق الدفع">Payment methods</a>
+          <a href="#messages" data-ar="رسائل واتساب">WhatsApp messages</a>
+        </nav>
+
+        <div>
+          <!-- Clinic details -->
+          <section class="panel setup-section" id="details">
+            <div class="panel-head"><h2 data-ar="بيانات العيادة">Clinic details</h2></div>
+            <div class="panel-body">
+              <div class="form-grid">
+                <div class="field"><label for="c-name" data-ar="اسم العيادة">Clinic name</label><input id="c-name" type="text" value="Nile Family Clinic"></div>
+                <div class="field"><label for="c-spec" data-ar="التخصص">Specialty</label>
+                  <select id="c-spec"><option data-ar="طب الأسرة والأسنان">Family medicine and dental</option><option data-ar="أسنان">Dental</option><option data-ar="أطفال">Pediatrics</option><option data-ar="جلدية">Dermatology</option><option data-ar="نساء وتوليد">Obstetrics and gynecology</option><option data-ar="أخرى">Other</option></select>
+                </div>
+                <div class="field"><label for="c-phone" data-ar="تليفون العيادة">Clinic phone</label><input id="c-phone" type="tel" value="02 2000 0000"></div>
+                <div class="field"><label for="c-wa" data-ar="رقم واتساب العيادة">Clinic WhatsApp number</label><input id="c-wa" type="tel" value="010 0000 0000"></div>
+                <div class="field full"><label for="c-addr" data-ar="العنوان">Address</label><input id="c-addr" type="text" value="12 Mostafa El-Nahas St., Nasr City, Cairo" data-ar-ph="العنوان"></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Doctors -->
+          <section class="panel setup-section" id="doctors">
+            <div class="panel-head">
+              <h2 data-ar="الأطباء والموظفين">Doctors and staff</h2>
+              <a class="btn btn-soft" href="#doctors" style="padding:10px 16px;font-size:14px"><span data-ar="+ إضافة شخص">+ Add person</span></a>
+            </div>
+            <div>
+              <div class="list-row"><span class="avatar">SN</span><div class="grow"><strong data-ar="د. سلمى نبيل">Dr. Salma Nabil</strong><span data-ar="طب الأسرة · السبت إلى الخميس">Family medicine · Sat to Thu</span></div><a class="btn btn-ghost" href="#doctors" style="padding:9px 16px;font-size:14px" data-ar="تعديل">Edit</a></div>
+              <div class="list-row"><span class="avatar a3">OF</span><div class="grow"><strong data-ar="د. عمر فتحي">Dr. Omar Fathy</strong><span data-ar="أسنان · الأحد والثلاثاء والخميس">Dentist · Sun, Tue, Thu</span></div><a class="btn btn-ghost" href="#doctors" style="padding:9px 16px;font-size:14px" data-ar="تعديل">Edit</a></div>
+              <div class="list-row"><span class="avatar a2">MA</span><div class="grow"><strong data-ar="مي عادل">Mai Adel</strong><span data-ar="الاستقبال · المواعيد والدفع">Reception · bookings and payments</span></div><a class="btn btn-ghost" href="#doctors" style="padding:9px 16px;font-size:14px" data-ar="تعديل">Edit</a></div>
+            </div>
+          </section>
+
+          <!-- Hours -->
+          <section class="panel setup-section" id="hours">
+            <div class="panel-head"><h2 data-ar="مواعيد العمل">Working hours</h2></div>
+            <div class="hours">
+              <div class="list-row"><span class="day-name" data-ar="السبت">Saturday</span><label class="switch"><input type="checkbox" checked aria-label="Open Saturday"><span></span></label><input type="time" value="09:00" aria-label="From"> <span>–</span> <input type="time" value="17:00" aria-label="To"></div>
+              <div class="list-row"><span class="day-name" data-ar="الأحد">Sunday</span><label class="switch"><input type="checkbox" checked aria-label="Open Sunday"><span></span></label><input type="time" value="09:00" aria-label="From"> <span>–</span> <input type="time" value="17:00" aria-label="To"></div>
+              <div class="list-row"><span class="day-name" data-ar="الاثنين">Monday</span><label class="switch"><input type="checkbox" checked aria-label="Open Monday"><span></span></label><input type="time" value="09:00" aria-label="From"> <span>–</span> <input type="time" value="17:00" aria-label="To"></div>
+              <div class="list-row"><span class="day-name" data-ar="الثلاثاء">Tuesday</span><label class="switch"><input type="checkbox" checked aria-label="Open Tuesday"><span></span></label><input type="time" value="09:00" aria-label="From"> <span>–</span> <input type="time" value="17:00" aria-label="To"></div>
+              <div class="list-row"><span class="day-name" data-ar="الأربعاء">Wednesday</span><label class="switch"><input type="checkbox" checked aria-label="Open Wednesday"><span></span></label><input type="time" value="09:00" aria-label="From"> <span>–</span> <input type="time" value="17:00" aria-label="To"></div>
+              <div class="list-row"><span class="day-name" data-ar="الخميس">Thursday</span><label class="switch"><input type="checkbox" checked aria-label="Open Thursday"><span></span></label><input type="time" value="09:00" aria-label="From"> <span>–</span> <input type="time" value="14:00" aria-label="To"></div>
+              <div class="list-row"><span class="day-name" data-ar="الجمعة">Friday</span><label class="switch"><input type="checkbox" aria-label="Open Friday"><span></span></label><span class="muted" data-ar="مغلق">Closed</span></div>
+            </div>
+          </section>
+
+          <!-- Services -->
+          <section class="panel setup-section" id="services">
+            <div class="panel-head">
+              <h2 data-ar="الخدمات والأسعار">Services and prices</h2>
+              <a class="btn btn-soft" href="#services" style="padding:10px 16px;font-size:14px"><span data-ar="+ إضافة خدمة">+ Add service</span></a>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th data-ar="الخدمة">Service</th><th data-ar="المدة">Duration</th><th class="amt" data-ar="السعر (ج.م)">Price (EGP)</th></tr></thead>
+                <tbody>
+                  <tr><td><strong data-ar="كشف">Check-up</strong></td><td class="muted" data-ar="20 دقيقة">20 min</td><td class="amt">500</td></tr>
+                  <tr><td><strong data-ar="استشارة / متابعة">Follow-up</strong></td><td class="muted" data-ar="15 دقيقة">15 min</td><td class="amt">250</td></tr>
+                  <tr><td><strong data-ar="تنظيف أسنان">Teeth cleaning</strong></td><td class="muted" data-ar="30 دقيقة">30 min</td><td class="amt">600</td></tr>
+                  <tr><td><strong data-ar="أشعة">X-ray</strong></td><td class="muted" data-ar="10 دقائق">10 min</td><td class="amt">350</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Payments -->
+          <section class="panel setup-section" id="payments">
+            <div class="panel-head"><h2 data-ar="طرق الدفع">Payment methods</h2></div>
+            <div>
+              <div class="list-row"><span class="icon" style="width:42px;height:42px;border-radius:12px;background:var(--blue-soft);display:grid;place-items:center"><svg viewBox="0 0 24 24" class="ic" style="width:20px;height:20px"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg></span><div class="grow"><strong data-ar="نقدي">Cash</strong><span data-ar="يُسجَّل في دفتر نقدية اليوم">Recorded in the daily cash book</span></div><label class="switch"><input type="checkbox" checked aria-label="Cash"><span></span></label></div>
+              <div class="list-row"><span class="icon" style="width:42px;height:42px;border-radius:12px;background:#F6EBDD;color:#8A5A1E;display:grid;place-items:center"><svg viewBox="0 0 24 24" class="ic" style="width:20px;height:20px"><path d="M4 8h13l-3-3M20 16H7l3 3"/></svg></span><div class="grow"><strong data-ar="تحويل (إنستاباي / محافظ إلكترونية)">Transfer (InstaPay / mobile wallets)</strong><span data-ar="يظهر رقم التحويل في رسالة التأكيد">Your transfer details appear in the confirmation message</span></div><label class="switch"><input type="checkbox" checked aria-label="Transfer"><span></span></label></div>
+              <div class="list-row"><span class="icon" style="width:42px;height:42px;border-radius:12px;background:#DDF2EE;color:#0B6B60;display:grid;place-items:center"><svg viewBox="0 0 24 24" class="ic" style="width:20px;height:20px"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M9 7h6M9 11h6"/></svg></span><div class="grow"><strong data-ar="ماكينة POS (بطاقات)">POS machine (cards)</strong><span data-ar="البنك: البنك الأهلي المصري">Bank: National Bank of Egypt</span></div><label class="switch"><input type="checkbox" checked aria-label="POS"><span></span></label></div>
+            </div>
+          </section>
+
+          <!-- WhatsApp messages -->
+          <section class="panel setup-section" id="messages">
+            <div class="panel-head"><h2 data-ar="رسائل واتساب">WhatsApp messages</h2></div>
+            <div class="panel-body" style="display:grid;gap:22px">
+              <div class="field">
+                <label for="m-confirm" data-ar="تأكيد الحجز">Booking confirmation</label>
+                <textarea id="m-confirm" data-ar="أهلاً {name}، تم تأكيد حجزك مع {doctor} يوم {date} الساعة {time}. في انتظارك في عيادة النيل للأسرة.">Hi {name}, your visit with {doctor} is confirmed for {date} at {time}. See you at Nile Family Clinic.</textarea>
+              </div>
+              <div class="field">
+                <label for="m-remind" data-ar="تذكير قبل الموعد بيوم">Reminder, one day before</label>
+                <textarea id="m-remind" data-ar="أهلاً {name}، تذكير بموعدك بكرة الساعة {time}. لو محتاج تغيّر الموعد ردّ على الرسالة دي.">Hi {name}, a reminder of your visit tomorrow at {time}. Reply to this message if you need to change it.</textarea>
+              </div>
+              <div class="field">
+                <label for="m-follow" data-ar="متابعة بعد الزيارة">Follow-up after the visit</label>
+                <textarea id="m-follow" data-ar="أهلاً {name}، نتمنى لك الشفاء. لو عندك أي سؤال، إحنا هنا على واتساب.">Hi {name}, we hope you're feeling better. If you have any questions, we're here on WhatsApp.</textarea>
+                <p class="template-help"><span data-ar="الكلمات بين الأقواس تتغير تلقائيًا:">Words in brackets fill in automatically:</span> <span class="chip-code">{name}</span> <span class="chip-code">{doctor}</span> <span class="chip-code">{date}</span> <span class="chip-code">{time}</span></p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>

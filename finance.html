@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-ar="الحسابات — آرك كلينك">Finance — ArkClinic</title>
+  <link rel="icon" href="assets/img/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=13">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+<div class="app">
+
+  <!-- ============ Sidebar menu ============ -->
+  <aside class="sidebar">
+    <a class="logo" href="dashboard.html" aria-label="ArkClinic">
+      <svg viewBox="0 0 90 80" fill="none" aria-hidden="true"><defs><linearGradient id="ark-pulse-1" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#7A140E"/><stop offset=".35" stop-color="#C8281A"/><stop offset=".7" stop-color="#E8571E"/><stop offset="1" stop-color="#F5A623"/></linearGradient></defs><path d="M4 56H24L31 38L40 74L48 48L53 56H62C80 56 88 32 76 16C68 6 52 4 40 10" stroke="url(#ark-pulse-1)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="40" cy="10" r="5" fill="#F5A623"/></svg>
+      <span>Ark<b>Clinic</b></span>
+    </a>
+    <nav class="side-nav" aria-label="App">
+      <a href="dashboard.html"><svg viewBox="0 0 24 24" class="ic"><path d="M4 11l8-6 8 6v9H4z"/><path d="M10 20v-5h4v5"/></svg><span data-ar="اليوم">Today</span></a>
+      <a class="hide-sm" href="dashboard.html#schedule"><svg viewBox="0 0 24 24" class="ic"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span data-ar="المواعيد">Appointments</span></a>
+      <a class="hide-sm" href="dashboard.html#schedule"><svg viewBox="0 0 24 24" class="ic"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 6"/></svg><span data-ar="المرضى">Patients</span></a>
+      <a href="setup.html#messages"><svg viewBox="0 0 24 24" class="ic"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z"/><path d="M9 10h6M9 13.5h4"/></svg><span data-ar="الرسائل">Messages</span></a>
+      <a class="active" href="finance.html"><svg viewBox="0 0 24 24" class="ic"><rect x="3" y="6" width="18" height="13" rx="3"/><path d="M3 10.5h18M15.5 15h2.5"/></svg><span data-ar="الحسابات">Finance</span></a>
+      <div class="sep"></div>
+      <a href="setup.html"><svg viewBox="0 0 24 24" class="ic"><path d="M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/></svg><span data-ar="إعداد العيادة">Clinic setup</span></a>
+    </nav>
+    <div class="side-foot">
+      <div class="side-help">
+        <strong data-ar="محتاج مساعدة؟">Need a hand?</strong>
+        <p data-ar="فريقنا متاح على واتساب.">Our team is on WhatsApp.</p>
+        <a class="btn btn-wa" href="https://wa.me/201000000000" target="_blank" rel="noopener" data-ar="كلّم الدعم">Chat with support</a>
+      </div>
+      <nav class="side-nav"><a href="index.html"><svg viewBox="0 0 24 24" class="ic flip"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 16l-4-4 4-4M6 12h10"/></svg><span data-ar="تسجيل الخروج">Log out</span></a></nav>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <label class="search">
+        <span class="sr-only">Search</span>
+        <svg viewBox="0 0 24 24" class="ic"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input type="search" placeholder="Search payments and expenses" data-ar-ph="ابحث في المدفوعات والمصروفات">
+      </label>
+      <div class="spacer"></div>
+      <button class="lang-btn" type="button" data-lang-toggle>عربي</button>
+      <button class="icon-btn" type="button" aria-label="Notifications"><svg viewBox="0 0 24 24" class="ic"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15zM10 20.5h4"/></svg></button>
+      <div class="me"><span class="avatar">SN</span><span data-ar="د. سلمى نبيل">Dr. Salma Nabil</span></div>
+    </header>
+
+    <main class="page">
+      <div class="page-head">
+        <div>
+          <h1 data-ar="الحسابات">Finance</h1>
+          <p data-ar="كل جنيه داخل وخارج، في صفحة واحدة واضحة.">Every pound in and out, in one clear view.</p>
+        </div>
+        <a class="btn btn-primary btn-lg" href="#entries">
+          <svg viewBox="0 0 24 24" class="ic"><path d="M12 5v14M5 12h14"/></svg>
+          <span data-ar="إضافة حركة">Add entry</span>
+        </a>
+      </div>
+
+      <!-- ============ Month at a glance ============ -->
+      <section class="kpis" aria-label="November at a glance">
+        <div class="kpi"><span data-ar="إيرادات نوفمبر">Income in November</span><strong data-ar="86,400 ج.م">EGP 86,400</strong><small data-ar="من 214 زيارة">From 214 visits</small></div>
+        <div class="kpi"><span data-ar="مصروفات نوفمبر">Expenses in November</span><strong data-ar="31,250 ج.م">EGP 31,250</strong><small data-ar="إيجار ومرتبات ومستلزمات">Rent, salaries, supplies</small></div>
+        <div class="kpi dark"><span data-ar="صافي الربح">Net profit</span><strong data-ar="55,150 ج.م">EGP 55,150</strong><small data-ar="لشهر نوفمبر حتى الآن">November so far</small></div>
+        <div class="kpi"><span data-ar="مبالغ لم تُحصّل">Not collected yet</span><strong data-ar="1,450 ج.م">EGP 1,450</strong><small data-ar="3 زيارات بدون دفع">3 unpaid visits</small></div>
+      </section>
+
+      <div class="grid-2">
+        <div>
+          <!-- ============ Last 7 days chart ============ -->
+          <section class="panel">
+            <div class="panel-head">
+              <h2 data-ar="آخر 7 أيام">Last 7 days</h2>
+              <div class="chart-legend">
+                <span style="--c:#3B5BDB" data-ar="إيرادات">Income</span>
+                <span style="--c:#B4762A" data-ar="مصروفات">Expenses</span>
+              </div>
+            </div>
+            <div class="panel-body chart">
+              <div class="bars" role="img" aria-label="Income and expenses for the last 7 days, in EGP. Full figures in the entries table below.">
+                <div class="grid-lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+                <div class="axis" aria-hidden="true"><span>6K</span><span>4K</span><span>2K</span><span>0</span></div>
+                <div class="day"><i class="b inc" style="height:65%" data-tip="Income 3,900" data-ar-tip="إيرادات 3,900"></i><i class="b exp" style="height:20%" data-tip="Expenses 1,200" data-ar-tip="مصروفات 1,200"></i></div>
+                <div class="day"><i class="b inc" style="height:76.7%" data-tip="Income 4,600" data-ar-tip="إيرادات 4,600"></i><i class="b exp" style="height:10%" data-tip="Expenses 600" data-ar-tip="مصروفات 600"></i></div>
+                <div class="day"><i class="b inc" style="height:86.7%" data-tip="Income 5,200" data-ar-tip="إيرادات 5,200"></i><i class="b exp" style="height:40%" data-tip="Expenses 2,400" data-ar-tip="مصروفات 2,400"></i></div>
+                <div class="day"></div>
+                <div class="day"><i class="b inc" style="height:96.7%" data-tip="Income 5,800" data-ar-tip="إيرادات 5,800"></i><i class="b exp" style="height:15%" data-tip="Expenses 900" data-ar-tip="مصروفات 900"></i></div>
+                <div class="day"><i class="b inc" style="height:71.7%" data-tip="Income 4,300" data-ar-tip="إيرادات 4,300"></i><i class="b exp" style="height:58.3%" data-tip="Expenses 3,500" data-ar-tip="مصروفات 3,500"></i></div>
+                <div class="day"><i class="b inc" style="height:20.8%" data-tip="Income 1,250" data-ar-tip="إيرادات 1,250"></i><i class="b exp" style="height:5%" data-tip="Expenses 300" data-ar-tip="مصروفات 300"></i></div>
+              </div>
+              <div class="days" aria-hidden="true">
+                <span></span>
+                <span data-ar="ثلاثاء">Tue</span><span data-ar="أربعاء">Wed</span><span data-ar="خميس">Thu</span><span data-ar="جمعة (مغلق)">Fri (closed)</span><span data-ar="سبت">Sat</span><span data-ar="أحد">Sun</span><span data-ar="اليوم"><b>Today</b></span>
+              </div>
+            </div>
+          </section>
+
+          <!-- ============ Entries ============ -->
+          <section class="panel" id="entries">
+            <div class="panel-head">
+              <h2 data-ar="آخر الحركات">Latest entries</h2>
+              <div class="seg" role="group" aria-label="Period">
+                <button type="button" data-ar="اليوم">Today</button>
+                <button type="button" data-ar="الأسبوع">This week</button>
+                <button class="on" type="button" data-ar="الشهر">This month</button>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table class="stack-sm">
+                <thead>
+                  <tr>
+                    <th data-ar="التاريخ">Date</th>
+                    <th data-ar="البيان">Description</th>
+                    <th data-ar="الطريقة">Method</th>
+                    <th class="amt" data-ar="المبلغ (ج.م)">Amount (EGP)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="muted" data-hide-sm data-ar="24 نوفمبر">Nov 24</td>
+                    <td><strong data-ar="كشف — نور حسن">Check-up — Nour Hassan</strong><div class="sub muted" data-ar="إيراد · د. عمر">Income · Dr. Omar</div></td>
+                    <td data-hide-sm><span class="method" style="--c:#B4762A" data-ar="تحويل">Transfer</span></td>
+                    <td class="amt plus">+500</td>
+                  </tr>
+                  <tr>
+                    <td class="muted" data-hide-sm data-ar="24 نوفمبر">Nov 24</td>
+                    <td><strong data-ar="استشارة — كريم سامي">Follow-up — Karim Samy</strong><div class="sub muted" data-ar="إيراد · د. سلمى">Income · Dr. Salma</div></td>
+                    <td data-hide-sm><span class="method" style="--c:#0E9384">POS</span></td>
+                    <td class="amt plus">+250</td>
+                  </tr>
+                  <tr>
+                    <td class="muted" data-hide-sm data-ar="24 نوفمبر">Nov 24</td>
+                    <td><strong data-ar="كشف — منى عادل">Check-up — Mona Adel</strong><div class="sub muted" data-ar="إيراد · د. سلمى">Income · Dr. Salma</div></td>
+                    <td data-hide-sm><span class="method" style="--c:#3B5BDB" data-ar="نقدي">Cash</span></td>
+                    <td class="amt plus">+500</td>
+                  </tr>
+                  <tr>
+                    <td class="muted" data-hide-sm data-ar="24 نوفمبر">Nov 24</td>
+                    <td><strong data-ar="مياه وقهوة للعيادة">Water and coffee</strong><div class="sub muted" data-ar="مصروف · مستلزمات">Expense · Supplies</div></td>
+                    <td data-hide-sm><span class="method" style="--c:#3B5BDB" data-ar="نقدي">Cash</span></td>
+                    <td class="amt minus">−300</td>
+                  </tr>
+                  <tr>
+                    <td class="muted" data-hide-sm data-ar="23 نوفمبر">Nov 23</td>
+                    <td><strong data-ar="مستلزمات أسنان — النور الطبية">Dental supplies — Al-Nour Medical</strong><div class="sub muted" data-ar="مصروف · مستلزمات">Expense · Supplies</div></td>
+                    <td data-hide-sm><span class="method" style="--c:#B4762A" data-ar="تحويل">Transfer</span></td>
+                    <td class="amt minus">−3,500</td>
+                  </tr>
+                  <tr>
+                    <td class="muted" data-hide-sm data-ar="23 نوفمبر">Nov 23</td>
+                    <td><strong data-ar="تنظيف أسنان — هنا محمود">Cleaning — Hana Mahmoud</strong><div class="sub muted" data-ar="إيراد · د. عمر">Income · Dr. Omar</div></td>
+                    <td data-hide-sm><span class="method" style="--c:#0E9384">POS</span></td>
+                    <td class="amt plus">+600</td>
+                  </tr>
+                  <tr>
+                    <td class="muted" data-hide-sm data-ar="22 نوفمبر">Nov 22</td>
+                    <td><strong data-ar="فاتورة الكهرباء">Electricity bill</strong><div class="sub muted" data-ar="مصروف · مرافق">Expense · Utilities</div></td>
+                    <td data-hide-sm><span class="method" style="--c:#3B5BDB" data-ar="نقدي">Cash</span></td>
+                    <td class="amt minus">−900</td>
+                  </tr>
+                  <tr>
+                    <td class="muted" data-hide-sm data-ar="20 نوفمبر">Nov 20</td>
+                    <td><strong data-ar="سلفة مرتب — مساعدة العيادة">Salary advance — clinic assistant</strong><div class="sub muted" data-ar="مصروف · مرتبات">Expense · Salaries</div></td>
+                    <td data-hide-sm><span class="method" style="--c:#B4762A" data-ar="تحويل">Transfer</span></td>
+                    <td class="amt minus">−2,400</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+
+        <div>
+          <!-- ============ Income by method ============ -->
+          <section class="panel">
+            <div class="panel-head"><h2 data-ar="الإيرادات حسب طريقة الدفع">Income by method</h2></div>
+            <div class="panel-body">
+              <div class="money-total" data-ar="86,400 ج.م">EGP 86,400</div>
+              <div class="money-sub" data-ar="نوفمبر حتى الآن">November so far</div>
+              <div class="stack" role="img" aria-label="Cash 41,500, Transfer 25,900, POS 19,000">
+                <i style="flex:41500;background:#3B5BDB"></i><i style="flex:25900;background:#B4762A"></i><i style="flex:19000;background:#0E9384"></i>
+              </div>
+              <div class="money-rows">
+                <div class="money-row"><span class="method" style="--c:#3B5BDB" data-ar="نقدي">Cash</span><span><strong>41,500</strong><em>48%</em></span></div>
+                <div class="money-row"><span class="method" style="--c:#B4762A" data-ar="تحويل (إنستاباي / محفظة)">Transfer (InstaPay / wallet)</span><span><strong>25,900</strong><em>30%</em></span></div>
+                <div class="money-row"><span class="method" style="--c:#0E9384" data-ar="ماكينة POS">POS card</span><span><strong>19,000</strong><em>22%</em></span></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ============ Expenses by category ============ -->
+          <section class="panel">
+            <div class="panel-head"><h2 data-ar="المصروفات حسب البند">Expenses by category</h2></div>
+            <div class="panel-body">
+              <div class="cat-rows">
+                <div class="cat"><div class="money-row"><span data-ar="الإيجار">Rent</span><strong>12,000</strong></div><div class="cat-bar"><i style="width:100%"></i></div></div>
+                <div class="cat"><div class="money-row"><span data-ar="المرتبات">Salaries</span><strong>9,600</strong></div><div class="cat-bar"><i style="width:80%"></i></div></div>
+                <div class="cat"><div class="money-row"><span data-ar="المستلزمات">Supplies</span><strong>6,150</strong></div><div class="cat-bar"><i style="width:51.3%"></i></div></div>
+                <div class="cat"><div class="money-row"><span data-ar="المرافق">Utilities</span><strong>2,100</strong></div><div class="cat-bar"><i style="width:17.5%"></i></div></div>
+                <div class="cat"><div class="money-row"><span data-ar="أخرى">Other</span><strong>1,400</strong></div><div class="cat-bar"><i style="width:11.7%"></i></div></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-ar="اليوم — آرك كلينك">Today — ArkClinic</title>
+  <link rel="icon" href="assets/img/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=13">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+<div class="app">
+
+  <!-- ============ Sidebar menu ============ -->
+  <aside class="sidebar">
+    <a class="logo" href="dashboard.html" aria-label="ArkClinic">
+      <svg viewBox="0 0 90 80" fill="none" aria-hidden="true"><defs><linearGradient id="ark-pulse-1" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#7A140E"/><stop offset=".35" stop-color="#C8281A"/><stop offset=".7" stop-color="#E8571E"/><stop offset="1" stop-color="#F5A623"/></linearGradient></defs><path d="M4 56H24L31 38L40 74L48 48L53 56H62C80 56 88 32 76 16C68 6 52 4 40 10" stroke="url(#ark-pulse-1)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="40" cy="10" r="5" fill="#F5A623"/></svg>
+      <span>Ark<b>Clinic</b></span>
+    </a>
+    <nav class="side-nav" aria-label="App">
+      <a class="active" href="dashboard.html"><svg viewBox="0 0 24 24" class="ic"><path d="M4 11l8-6 8 6v9H4z"/><path d="M10 20v-5h4v5"/></svg><span data-ar="اليوم">Today</span></a>
+      <a class="hide-sm" href="dashboard.html#schedule"><svg viewBox="0 0 24 24" class="ic"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span data-ar="المواعيد">Appointments</span></a>
+      <a class="hide-sm" href="dashboard.html#schedule"><svg viewBox="0 0 24 24" class="ic"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 6"/></svg><span data-ar="المرضى">Patients</span></a>
+      <a href="setup.html#messages"><svg viewBox="0 0 24 24" class="ic"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z"/><path d="M9 10h6M9 13.5h4"/></svg><span data-ar="الرسائل">Messages</span></a>
+      <a href="finance.html"><svg viewBox="0 0 24 24" class="ic"><rect x="3" y="6" width="18" height="13" rx="3"/><path d="M3 10.5h18M15.5 15h2.5"/></svg><span data-ar="الحسابات">Finance</span></a>
+      <div class="sep"></div>
+      <a href="setup.html"><svg viewBox="0 0 24 24" class="ic"><path d="M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/></svg><span data-ar="إعداد العيادة">Clinic setup</span></a>
+    </nav>
+    <div class="side-foot">
+      <div class="side-help">
+        <strong data-ar="محتاج مساعدة؟">Need a hand?</strong>
+        <p data-ar="فريقنا متاح على واتساب.">Our team is on WhatsApp.</p>
+        <a class="btn btn-wa" href="https://wa.me/201000000000" target="_blank" rel="noopener" data-ar="كلّم الدعم">Chat with support</a>
+      </div>
+      <nav class="side-nav"><a href="index.html"><svg viewBox="0 0 24 24" class="ic flip"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 16l-4-4 4-4M6 12h10"/></svg><span data-ar="تسجيل الخروج">Log out</span></a></nav>
+    </div>
+  </aside>
+
+  <div class="main">
+    <!-- ============ Top bar ============ -->
+    <header class="topbar">
+      <label class="search">
+        <span class="sr-only">Search</span>
+        <svg viewBox="0 0 24 24" class="ic"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input type="search" placeholder="Search patients or phone numbers" data-ar-ph="ابحث باسم المريض أو رقم الموبايل">
+      </label>
+      <div class="spacer"></div>
+      <button class="lang-btn" type="button" data-lang-toggle>عربي</button>
+      <button class="icon-btn" type="button" aria-label="Notifications"><svg viewBox="0 0 24 24" class="ic"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15zM10 20.5h4"/></svg></button>
+      <div class="me"><span class="avatar">SN</span><span data-ar="د. سلمى نبيل">Dr. Salma Nabil</span></div>
+    </header>
+
+    <main class="page">
+      <!-- ============ Page head ============ -->
+      <div class="page-head">
+        <div>
+          <h1 data-ar="صباح الخير يا د. سلمى">Good morning, Dr. Salma</h1>
+          <p data-ar="10 زيارات النهارده. المريض الجاي الساعة 10:30.">10 visits today. Next patient at 10:30.</p>
+        </div>
+        <a class="btn btn-primary btn-lg" href="#schedule">
+          <svg viewBox="0 0 24 24" class="ic"><path d="M12 5v14M5 12h14"/></svg>
+          <span data-ar="حجز جديد">New booking</span>
+        </a>
+      </div>
+
+      <!-- ============ KPIs ============ -->
+      <section class="kpis" aria-label="Today at a glance">
+        <div class="kpi"><span data-ar="زيارات اليوم">Visits today</span><strong>10</strong><small data-ar="3 تمت · 7 متبقية">3 done · 7 to go</small></div>
+        <div class="kpi"><span data-ar="في الانتظار الآن">Waiting now</span><strong>1</strong><small data-ar="متوسط الانتظار 8 دقائق">Avg. wait 8 min</small></div>
+        <div class="kpi"><span data-ar="غير مؤكد">Not confirmed</span><strong>2</strong><small data-ar="أرسل تذكير واتساب">Send a WhatsApp reminder</small></div>
+        <div class="kpi dark"><span data-ar="تحصيل اليوم">Collected today</span><strong data-ar="1,250 ج.م">EGP 1,250</strong><small data-ar="من 4,450 ج.م متوقعة">of EGP 4,450 expected</small></div>
+      </section>
+
+      <div class="grid-2">
+        <!-- ============ Today's schedule ============ -->
+        <section class="panel" id="schedule">
+          <div class="panel-head">
+            <h2 data-ar="جدول اليوم">Today's schedule</h2>
+            <div class="seg" role="group" aria-label="Doctor filter">
+              <button class="on" type="button" data-ar="الكل">All</button>
+              <button type="button" data-ar="د. سلمى">Dr. Salma</button>
+              <button type="button" data-ar="د. عمر">Dr. Omar</button>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table class="stack-sm sched">
+              <thead>
+                <tr>
+                  <th data-ar="الوقت">Time</th>
+                  <th data-ar="المريض">Patient</th>
+                  <th data-ar="الخدمة والطبيب">Service</th>
+                  <th data-ar="الحالة">Status</th>
+                  <th data-ar="الدفع">Payment</th>
+                </tr>
+              </thead>
+              <tbody>
+            <tr>
+              <td class="time">09:00</td>
+              <td><div class="patient"><span class="avatar ">MA</span><div><div class="name" data-ar="منى عادل">Mona Adel</div><div class="sub">0100 123 4567</div></div><a class="wa-link" href="https://wa.me/201001234567?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D9%85%D9%86%D9%89%D8%8C%20%D8%AA%D8%B0%D9%83%D9%8A%D8%B1%20%D8%A8%D9%85%D9%88%D8%B9%D8%AF%D9%83%20%D8%A7%D9%84%D9%8A%D9%88%D9%85%20%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9%2009%3A00%20%D9%81%D9%8A%20%D8%B9%D9%8A%D8%A7%D8%AF%D8%A9%20%D8%A7%D9%84%D9%86%D9%8A%D9%84%20%D9%84%D9%84%D8%A3%D8%B3%D8%B1%D8%A9.%20%D9%84%D9%88%20%D9%85%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D8%BA%D9%8A%D9%91%D8%B1%20%D8%A7%D9%84%D9%85%D9%88%D8%B9%D8%AF%20%D8%B1%D8%AF%D9%91%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%B1%D8%B3%D8%A7%D9%84%D8%A9%20%D8%AF%D9%8A." target="_blank" rel="noopener" title="WhatsApp Mona Adel" aria-label="WhatsApp Mona Adel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z" fill="#25D366"/><path d="M9.3 8.7c.2-.5.5-.6.8-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.5.6c-.1.2-.2.3 0 .6.4.7 1 1.3 1.6 1.7.3.2.6.3.8.1l.6-.7c.2-.2.3-.2.5-.1l1.5.7c.3.1.4.2.4.4 0 .7-.4 1.4-1.1 1.6-.8.3-2 .2-3.6-.8-1.5-1-2.6-2.4-3-3.5-.3-.9-.1-1.9.3-2.4z" fill="#fff"/></svg></a></div></td>
+              <td data-hide-sm><div class="svc" data-ar="كشف">Check-up</div><div class="sub muted" data-ar="د. سلمى">Dr. Salma</div></td>
+              <td class="st"><span class="pill done" data-ar="تم">Done</span></td>
+              <td data-hide-sm><span class="method" style="--c:#3B5BDB"><span data-ar="نقدي">Cash</span>&nbsp;·&nbsp;<b dir="ltr">500</b></span></td>
+            </tr>
+            <tr>
+              <td class="time">09:30</td>
+              <td><div class="patient"><span class="avatar a2">KS</span><div><div class="name" data-ar="كريم سامي">Karim Samy</div><div class="sub">0111 234 5678</div></div><a class="wa-link" href="https://wa.me/201112345678?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D9%83%D8%B1%D9%8A%D9%85%D8%8C%20%D8%AA%D8%B0%D9%83%D9%8A%D8%B1%20%D8%A8%D9%85%D9%88%D8%B9%D8%AF%D9%83%20%D8%A7%D9%84%D9%8A%D9%88%D9%85%20%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9%2009%3A30%20%D9%81%D9%8A%20%D8%B9%D9%8A%D8%A7%D8%AF%D8%A9%20%D8%A7%D9%84%D9%86%D9%8A%D9%84%20%D9%84%D9%84%D8%A3%D8%B3%D8%B1%D8%A9.%20%D9%84%D9%88%20%D9%85%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D8%BA%D9%8A%D9%91%D8%B1%20%D8%A7%D9%84%D9%85%D9%88%D8%B9%D8%AF%20%D8%B1%D8%AF%D9%91%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%B1%D8%B3%D8%A7%D9%84%D8%A9%20%D8%AF%D9%8A." target="_blank" rel="noopener" title="WhatsApp Karim Samy" aria-label="WhatsApp Karim Samy"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z" fill="#25D366"/><path d="M9.3 8.7c.2-.5.5-.6.8-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.5.6c-.1.2-.2.3 0 .6.4.7 1 1.3 1.6 1.7.3.2.6.3.8.1l.6-.7c.2-.2.3-.2.5-.1l1.5.7c.3.1.4.2.4.4 0 .7-.4 1.4-1.1 1.6-.8.3-2 .2-3.6-.8-1.5-1-2.6-2.4-3-3.5-.3-.9-.1-1.9.3-2.4z" fill="#fff"/></svg></a></div></td>
+              <td data-hide-sm><div class="svc" data-ar="استشارة">Follow-up</div><div class="sub muted" data-ar="د. سلمى">Dr. Salma</div></td>
+              <td class="st"><span class="pill done" data-ar="تم">Done</span></td>
+              <td data-hide-sm><span class="method" style="--c:#0E9384"><span data-ar="POS">POS</span>&nbsp;·&nbsp;<b dir="ltr">250</b></span></td>
+            </tr>
+            <tr>
+              <td class="time">10:00</td>
+              <td><div class="patient"><span class="avatar a3">NH</span><div><div class="name" data-ar="نور حسن">Nour Hassan</div><div class="sub">0122 345 6789</div></div><a class="wa-link" href="https://wa.me/201223456789?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D9%86%D9%88%D8%B1%D8%8C%20%D8%AA%D8%B0%D9%83%D9%8A%D8%B1%20%D8%A8%D9%85%D9%88%D8%B9%D8%AF%D9%83%20%D8%A7%D9%84%D9%8A%D9%88%D9%85%20%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9%2010%3A00%20%D9%81%D9%8A%20%D8%B9%D9%8A%D8%A7%D8%AF%D8%A9%20%D8%A7%D9%84%D9%86%D9%8A%D9%84%20%D9%84%D9%84%D8%A3%D8%B3%D8%B1%D8%A9.%20%D9%84%D9%88%20%D9%85%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D8%BA%D9%8A%D9%91%D8%B1%20%D8%A7%D9%84%D9%85%D9%88%D8%B9%D8%AF%20%D8%B1%D8%AF%D9%91%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%B1%D8%B3%D8%A7%D9%84%D8%A9%20%D8%AF%D9%8A." target="_blank" rel="noopener" title="WhatsApp Nour Hassan" aria-label="WhatsApp Nour Hassan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z" fill="#25D366"/><path d="M9.3 8.7c.2-.5.5-.6.8-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.5.6c-.1.2-.2.3 0 .6.4.7 1 1.3 1.6 1.7.3.2.6.3.8.1l.6-.7c.2-.2.3-.2.5-.1l1.5.7c.3.1.4.2.4.4 0 .7-.4 1.4-1.1 1.6-.8.3-2 .2-3.6-.8-1.5-1-2.6-2.4-3-3.5-.3-.9-.1-1.9.3-2.4z" fill="#fff"/></svg></a></div></td>
+              <td data-hide-sm><div class="svc" data-ar="كشف">Check-up</div><div class="sub muted" data-ar="د. عمر">Dr. Omar</div></td>
+              <td class="st"><span class="pill in" data-ar="في الكشف">In clinic</span></td>
+              <td data-hide-sm><span class="method" style="--c:#B4762A"><span data-ar="تحويل">Transfer</span>&nbsp;·&nbsp;<b dir="ltr">500</b></span></td>
+            </tr>
+            <tr>
+              <td class="time">10:30</td>
+              <td><div class="patient"><span class="avatar a4">YA</span><div><div class="name" data-ar="يوسف علي">Youssef Ali</div><div class="sub">0101 456 7890</div></div><a class="wa-link" href="https://wa.me/201014567890?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D9%8A%D9%88%D8%B3%D9%81%D8%8C%20%D8%AA%D8%B0%D9%83%D9%8A%D8%B1%20%D8%A8%D9%85%D9%88%D8%B9%D8%AF%D9%83%20%D8%A7%D9%84%D9%8A%D9%88%D9%85%20%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9%2010%3A30%20%D9%81%D9%8A%20%D8%B9%D9%8A%D8%A7%D8%AF%D8%A9%20%D8%A7%D9%84%D9%86%D9%8A%D9%84%20%D9%84%D9%84%D8%A3%D8%B3%D8%B1%D8%A9.%20%D9%84%D9%88%20%D9%85%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D8%BA%D9%8A%D9%91%D8%B1%20%D8%A7%D9%84%D9%85%D9%88%D8%B9%D8%AF%20%D8%B1%D8%AF%D9%91%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%B1%D8%B3%D8%A7%D9%84%D8%A9%20%D8%AF%D9%8A." target="_blank" rel="noopener" title="WhatsApp Youssef Ali" aria-label="WhatsApp Youssef Ali"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z" fill="#25D366"/><path d="M9.3 8.7c.2-.5.5-.6.8-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.5.6c-.1.2-.2.3 0 .6.4.7 1 1.3 1.6 1.7.3.2.6.3.8.1l.6-.7c.2-.2.3-.2.5-.1l1.5.7c.3.1.4.2.4.4 0 .7-.4 1.4-1.1 1.6-.8.3-2 .2-3.6-.8-1.5-1-2.6-2.4-3-3.5-.3-.9-.1-1.9.3-2.4z" fill="#fff"/></svg></a></div></td>
+              <td data-hide-sm><div class="svc" data-ar="تنظيف">Cleaning</div><div class="sub muted" data-ar="د. عمر">Dr. Omar</div></td>
+              <td class="st"><span class="pill wait" data-ar="في الانتظار">Waiting</span></td>
+              <td data-hide-sm><span class="muted" data-ar="لم يُدفع بعد">Not paid yet</span></td>
+            </tr>
+            <tr>
+              <td class="time">11:00</td>
+              <td><div class="patient"><span class="avatar ">HM</span><div><div class="name" data-ar="هنا محمود">Hana Mahmoud</div><div class="sub">0155 567 8901</div></div><a class="wa-link" href="https://wa.me/201555678901?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D9%87%D9%86%D8%A7%D8%8C%20%D8%AA%D8%B0%D9%83%D9%8A%D8%B1%20%D8%A8%D9%85%D9%88%D8%B9%D8%AF%D9%83%20%D8%A7%D9%84%D9%8A%D9%88%D9%85%20%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9%2011%3A00%20%D9%81%D9%8A%20%D8%B9%D9%8A%D8%A7%D8%AF%D8%A9%20%D8%A7%D9%84%D9%86%D9%8A%D9%84%20%D9%84%D9%84%D8%A3%D8%B3%D8%B1%D8%A9.%20%D9%84%D9%88%20%D9%85%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D8%BA%D9%8A%D9%91%D8%B1%20%D8%A7%D9%84%D9%85%D9%88%D8%B9%D8%AF%20%D8%B1%D8%AF%D9%91%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%B1%D8%B3%D8%A7%D9%84%D8%A9%20%D8%AF%D9%8A." target="_blank" rel="noopener" title="WhatsApp Hana Mahmoud" aria-label="WhatsApp Hana Mahmoud"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z" fill="#25D366"/><path d="M9.3 8.7c.2-.5.5-.6.8-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.5.6c-.1.2-.2.3 0 .6.4.7 1 1.3 1.6 1.7.3.2.6.3.8.1l.6-.7c.2-.2.3-.2.5-.1l1.5.7c.3.1.4.2.4.4 0 .7-.4 1.4-1.1 1.6-.8.3-2 .2-3.6-.8-1.5-1-2.6-2.4-3-3.5-.3-.9-.1-1.9.3-2.4z" fill="#fff"/></svg></a></div></td>
+              <td data-hide-sm><div class="svc" data-ar="كشف">Check-up</div><div class="sub muted" data-ar="د. سلمى">Dr. Salma</div></td>
+              <td class="st"><span class="pill ok" data-ar="مؤكد">Confirmed</span></td>
+              <td data-hide-sm><span class="muted" data-ar="لم يُدفع بعد">Not paid yet</span></td>
+            </tr>
+            <tr>
+              <td class="time">11:30</td>
+              <td><div class="patient"><span class="avatar a2">OF</span><div><div class="name" data-ar="عمر فاروق">Omar Farouk</div><div class="sub">0106 678 9012</div></div><a class="wa-link" href="https://wa.me/201066789012?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%B9%D9%85%D8%B1%D8%8C%20%D8%AA%D8%B0%D9%83%D9%8A%D8%B1%20%D8%A8%D9%85%D9%88%D8%B9%D8%AF%D9%83%20%D8%A7%D9%84%D9%8A%D9%88%D9%85%20%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9%2011%3A30%20%D9%81%D9%8A%20%D8%B9%D9%8A%D8%A7%D8%AF%D8%A9%20%D8%A7%D9%84%D9%86%D9%8A%D9%84%20%D9%84%D9%84%D8%A3%D8%B3%D8%B1%D8%A9.%20%D9%84%D9%88%20%D9%85%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D8%BA%D9%8A%D9%91%D8%B1%20%D8%A7%D9%84%D9%85%D9%88%D8%B9%D8%AF%20%D8%B1%D8%AF%D9%91%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%B1%D8%B3%D8%A7%D9%84%D8%A9%20%D8%AF%D9%8A." target="_blank" rel="noopener" title="WhatsApp Omar Farouk" aria-label="WhatsApp Omar Farouk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z" fill="#25D366"/><path d="M9.3 8.7c.2-.5.5-.6.8-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.5.6c-.1.2-.2.3 0 .6.4.7 1 1.3 1.6 1.7.3.2.6.3.8.1l.6-.7c.2-.2.3-.2.5-.1l1.5.7c.3.1.4.2.4.4 0 .7-.4 1.4-1.1 1.6-.8.3-2 .2-3.6-.8-1.5-1-2.6-2.4-3-3.5-.3-.9-.1-1.9.3-2.4z" fill="#fff"/></svg></a></div></td>
+              <td data-hide-sm><div class="svc" data-ar="استشارة">Follow-up</div><div class="sub muted" data-ar="د. عمر">Dr. Omar</div></td>
+              <td class="st"><span class="pill ok" data-ar="مؤكد">Confirmed</span></td>
+              <td data-hide-sm><span class="muted" data-ar="لم يُدفع بعد">Not paid yet</span></td>
+            </tr>
+            <tr>
+              <td class="time">12:00</td>
+              <td><div class="patient"><span class="avatar a3">LI</span><div><div class="name" data-ar="ليلى إبراهيم">Laila Ibrahim</div><div class="sub">0127 789 0123</div></div><a class="wa-link" href="https://wa.me/201277890123?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D9%84%D9%8A%D9%84%D9%89%D8%8C%20%D8%AA%D8%B0%D9%83%D9%8A%D8%B1%20%D8%A8%D9%85%D9%88%D8%B9%D8%AF%D9%83%20%D8%A7%D9%84%D9%8A%D9%88%D9%85%20%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9%2012%3A00%20%D9%81%D9%8A%20%D8%B9%D9%8A%D8%A7%D8%AF%D8%A9%20%D8%A7%D9%84%D9%86%D9%8A%D9%84%20%D9%84%D9%84%D8%A3%D8%B3%D8%B1%D8%A9.%20%D9%84%D9%88%20%D9%85%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D8%BA%D9%8A%D9%91%D8%B1%20%D8%A7%D9%84%D9%85%D9%88%D8%B9%D8%AF%20%D8%B1%D8%AF%D9%91%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%B1%D8%B3%D8%A7%D9%84%D8%A9%20%D8%AF%D9%8A." target="_blank" rel="noopener" title="WhatsApp Laila Ibrahim" aria-label="WhatsApp Laila Ibrahim"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z" fill="#25D366"/><path d="M9.3 8.7c.2-.5.5-.6.8-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.5.6c-.1.2-.2.3 0 .6.4.7 1 1.3 1.6 1.7.3.2.6.3.8.1l.6-.7c.2-.2.3-.2.5-.1l1.5.7c.3.1.4.2.4.4 0 .7-.4 1.4-1.1 1.6-.8.3-2 .2-3.6-.8-1.5-1-2.6-2.4-3-3.5-.3-.9-.1-1.9.3-2.4z" fill="#fff"/></svg></a></div></td>
+              <td data-hide-sm><div class="svc" data-ar="كشف">Check-up</div><div class="sub muted" data-ar="د. سلمى">Dr. Salma</div></td>
+              <td class="st"><span class="pill no" data-ar="غير مؤكد">Not confirmed</span></td>
+              <td data-hide-sm><span class="muted" data-ar="لم يُدفع بعد">Not paid yet</span></td>
+            </tr>
+            <tr>
+              <td class="time">12:30</td>
+              <td><div class="patient"><span class="avatar a4">AT</span><div><div class="name" data-ar="أحمد طارق">Ahmed Tarek</div><div class="sub">0114 890 1234</div></div><a class="wa-link" href="https://wa.me/201148901234?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%AA%D8%B0%D9%83%D9%8A%D8%B1%20%D8%A8%D9%85%D9%88%D8%B9%D8%AF%D9%83%20%D8%A7%D9%84%D9%8A%D9%88%D9%85%20%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9%2012%3A30%20%D9%81%D9%8A%20%D8%B9%D9%8A%D8%A7%D8%AF%D8%A9%20%D8%A7%D9%84%D9%86%D9%8A%D9%84%20%D9%84%D9%84%D8%A3%D8%B3%D8%B1%D8%A9.%20%D9%84%D9%88%20%D9%85%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D8%BA%D9%8A%D9%91%D8%B1%20%D8%A7%D9%84%D9%85%D9%88%D8%B9%D8%AF%20%D8%B1%D8%AF%D9%91%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%B1%D8%B3%D8%A7%D9%84%D8%A9%20%D8%AF%D9%8A." target="_blank" rel="noopener" title="WhatsApp Ahmed Tarek" aria-label="WhatsApp Ahmed Tarek"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z" fill="#25D366"/><path d="M9.3 8.7c.2-.5.5-.6.8-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.5.6c-.1.2-.2.3 0 .6.4.7 1 1.3 1.6 1.7.3.2.6.3.8.1l.6-.7c.2-.2.3-.2.5-.1l1.5.7c.3.1.4.2.4.4 0 .7-.4 1.4-1.1 1.6-.8.3-2 .2-3.6-.8-1.5-1-2.6-2.4-3-3.5-.3-.9-.1-1.9.3-2.4z" fill="#fff"/></svg></a></div></td>
+              <td data-hide-sm><div class="svc" data-ar="أشعة">X-ray</div><div class="sub muted" data-ar="د. عمر">Dr. Omar</div></td>
+              <td class="st"><span class="pill ok" data-ar="مؤكد">Confirmed</span></td>
+              <td data-hide-sm><span class="muted" data-ar="لم يُدفع بعد">Not paid yet</span></td>
+            </tr>
+            <tr>
+              <td class="time">13:00</td>
+              <td><div class="patient"><span class="avatar ">MK</span><div><div class="name" data-ar="مريم خالد">Mariam Khaled</div><div class="sub">0109 901 2345</div></div><a class="wa-link" href="https://wa.me/201099012345?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D9%85%D8%B1%D9%8A%D9%85%D8%8C%20%D8%AA%D8%B0%D9%83%D9%8A%D8%B1%20%D8%A8%D9%85%D9%88%D8%B9%D8%AF%D9%83%20%D8%A7%D9%84%D9%8A%D9%88%D9%85%20%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9%2013%3A00%20%D9%81%D9%8A%20%D8%B9%D9%8A%D8%A7%D8%AF%D8%A9%20%D8%A7%D9%84%D9%86%D9%8A%D9%84%20%D9%84%D9%84%D8%A3%D8%B3%D8%B1%D8%A9.%20%D9%84%D9%88%20%D9%85%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D8%BA%D9%8A%D9%91%D8%B1%20%D8%A7%D9%84%D9%85%D9%88%D8%B9%D8%AF%20%D8%B1%D8%AF%D9%91%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%B1%D8%B3%D8%A7%D9%84%D8%A9%20%D8%AF%D9%8A." target="_blank" rel="noopener" title="WhatsApp Mariam Khaled" aria-label="WhatsApp Mariam Khaled"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z" fill="#25D366"/><path d="M9.3 8.7c.2-.5.5-.6.8-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.5.6c-.1.2-.2.3 0 .6.4.7 1 1.3 1.6 1.7.3.2.6.3.8.1l.6-.7c.2-.2.3-.2.5-.1l1.5.7c.3.1.4.2.4.4 0 .7-.4 1.4-1.1 1.6-.8.3-2 .2-3.6-.8-1.5-1-2.6-2.4-3-3.5-.3-.9-.1-1.9.3-2.4z" fill="#fff"/></svg></a></div></td>
+              <td data-hide-sm><div class="svc" data-ar="كشف">Check-up</div><div class="sub muted" data-ar="د. سلمى">Dr. Salma</div></td>
+              <td class="st"><span class="pill ok" data-ar="مؤكد">Confirmed</span></td>
+              <td data-hide-sm><span class="muted" data-ar="لم يُدفع بعد">Not paid yet</span></td>
+            </tr>
+            <tr>
+              <td class="time">13:30</td>
+              <td><div class="patient"><span class="avatar a2">MG</span><div><div class="name" data-ar="مصطفى جمال">Mostafa Gamal</div><div class="sub">0128 012 3456</div></div><a class="wa-link" href="https://wa.me/201280123456?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D9%85%D8%B5%D8%B7%D9%81%D9%89%D8%8C%20%D8%AA%D8%B0%D9%83%D9%8A%D8%B1%20%D8%A8%D9%85%D9%88%D8%B9%D8%AF%D9%83%20%D8%A7%D9%84%D9%8A%D9%88%D9%85%20%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9%2013%3A30%20%D9%81%D9%8A%20%D8%B9%D9%8A%D8%A7%D8%AF%D8%A9%20%D8%A7%D9%84%D9%86%D9%8A%D9%84%20%D9%84%D9%84%D8%A3%D8%B3%D8%B1%D8%A9.%20%D9%84%D9%88%20%D9%85%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D8%BA%D9%8A%D9%91%D8%B1%20%D8%A7%D9%84%D9%85%D9%88%D8%B9%D8%AF%20%D8%B1%D8%AF%D9%91%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%B1%D8%B3%D8%A7%D9%84%D8%A9%20%D8%AF%D9%8A." target="_blank" rel="noopener" title="WhatsApp Mostafa Gamal" aria-label="WhatsApp Mostafa Gamal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z" fill="#25D366"/><path d="M9.3 8.7c.2-.5.5-.6.8-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.5.6c-.1.2-.2.3 0 .6.4.7 1 1.3 1.6 1.7.3.2.6.3.8.1l.6-.7c.2-.2.3-.2.5-.1l1.5.7c.3.1.4.2.4.4 0 .7-.4 1.4-1.1 1.6-.8.3-2 .2-3.6-.8-1.5-1-2.6-2.4-3-3.5-.3-.9-.1-1.9.3-2.4z" fill="#fff"/></svg></a></div></td>
+              <td data-hide-sm><div class="svc" data-ar="استشارة">Follow-up</div><div class="sub muted" data-ar="د. عمر">Dr. Omar</div></td>
+              <td class="st"><span class="pill no" data-ar="غير مؤكد">Not confirmed</span></td>
+              <td data-hide-sm><span class="muted" data-ar="لم يُدفع بعد">Not paid yet</span></td>
+            </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <div>
+          <!-- ============ Today's money ============ -->
+          <section class="panel">
+            <div class="panel-head">
+              <h2 data-ar="فلوس اليوم">Today's money</h2>
+              <a class="link" href="finance.html" data-ar="فتح الحسابات ←">Open finance →</a>
+            </div>
+            <div class="panel-body">
+              <div class="money-total" data-ar="1,250 ج.م">EGP 1,250</div>
+              <div class="money-sub" data-ar="تم تحصيلها من 3 زيارات">Collected from 3 visits</div>
+              <div class="stack" role="img" aria-label="Cash 500, Transfer 500, POS 250">
+                <i style="flex:500;background:#3B5BDB"></i><i style="flex:500;background:#B4762A"></i><i style="flex:250;background:#0E9384"></i>
+              </div>
+              <div class="money-rows">
+                <div class="money-row"><span class="method" style="--c:#3B5BDB" data-ar="نقدي">Cash</span><span><strong>500</strong><em>40%</em></span></div>
+                <div class="money-row"><span class="method" style="--c:#B4762A" data-ar="تحويل (إنستاباي / محفظة)">Transfer (InstaPay / wallet)</span><span><strong>500</strong><em>40%</em></span></div>
+                <div class="money-row"><span class="method" style="--c:#0E9384" data-ar="ماكينة POS">POS card</span><span><strong>250</strong><em>20%</em></span></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ============ Setup menu ============ -->
+          <section class="panel">
+            <div class="panel-head">
+              <div style="flex:1">
+                <h2 data-ar="إعداد العيادة">Clinic setup</h2>
+                <div class="progress" aria-label="4 of 6 steps done"><i style="width:66%"></i></div>
+              </div>
+            </div>
+            <nav class="setup-list" aria-label="Clinic setup">
+              <a href="setup.html#details"><span class="icon"><svg viewBox="0 0 24 24" class="ic"><path d="M4 21V9l8-5 8 5v12M9 21v-6h6v6"/></svg></span><span data-ar="بيانات العيادة">Clinic details</span><svg class="chev ic flip" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a>
+              <a href="setup.html#doctors"><span class="icon"><svg viewBox="0 0 24 24" class="ic"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg></span><span data-ar="الأطباء والموظفين">Doctors and staff</span><svg class="chev ic flip" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a>
+              <a href="setup.html#hours"><span class="icon"><svg viewBox="0 0 24 24" class="ic"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span><span data-ar="مواعيد العمل">Working hours</span><svg class="chev ic flip" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a>
+              <a href="setup.html#services"><span class="icon"><svg viewBox="0 0 24 24" class="ic"><path d="M9 4h6v4h4v6h-4v6H9v-6H5V8h4z"/></svg></span><span data-ar="الخدمات والأسعار">Services and prices</span><svg class="chev ic flip" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a>
+              <a href="setup.html#payments"><span class="icon"><svg viewBox="0 0 24 24" class="ic"><rect x="3" y="6" width="18" height="13" rx="3"/><path d="M3 10.5h18"/></svg></span><span data-ar="طرق الدفع">Payment methods</span><svg class="chev ic flip" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a>
+              <a href="setup.html#messages"><span class="icon" style="background:#E7F9EE;color:var(--wa-ink)"><svg viewBox="0 0 24 24" class="ic"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z"/></svg></span><span data-ar="رسائل واتساب">WhatsApp messages</span><svg class="chev ic flip" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a>
+            </nav>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>
