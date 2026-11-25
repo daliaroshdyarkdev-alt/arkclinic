@@ -13,10 +13,12 @@ Plain HTML + CSS (plus one tiny script for the English/Arabic switch). No build 
 | `thanks.html` | Shown after a demo request |
 
 ## Publish
-Upload the whole `ArkClinic` folder to any static host (Netlify, Vercel, GitHub Pages, cPanel hosting).
+Live on GitHub Pages: https://daliaroshdyarkdev-alt.github.io/arkclinic/
+To publish a change: `git add .` → `git commit -m "what changed"` → `git push` (live about a minute later).
 
-**Demo form:** it is set up for **Netlify Forms** (works as-is there; requests appear in your Netlify dashboard).
-On any other host, change the form's `action` in `index.html` to a form service URL (e.g. Formspree).
+**Demo form:** sends requests to **Formspree**, which emails them to you. The form address is the
+`action` of the demo form in `index.html` (`https://formspree.io/f/...`). Works on any static host.
+If the stylesheet or script changes, bump the `?v=` number on their links so visitors get the new version.
 
 ## Replace before going live
 - Phone / WhatsApp: search for `201000000000`, `+20 100 000 0000`, `+20 2 0000 0000`

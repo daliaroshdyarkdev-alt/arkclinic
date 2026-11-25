@@ -54,6 +54,29 @@
     });
   }
 
+  // Demo form: send to Formspree in the background, then show the thank-you page
+  document.querySelectorAll('form[data-formspree]').forEach(function (form) {
+    var btn = form.querySelector('button[type="submit"]');
+    var msg = form.querySelector('.form-msg');
+    var say = function (en, ar) { if (msg) msg.textContent = root.lang === 'ar' ? ar : en; };
+    form.addEventListener('submit', function (e) {
+      if (!window.fetch) return; // very old browsers: normal form post
+      e.preventDefault();
+      btn.disabled = true;
+      say('Sending…', 'جارٍ الإرسال…');
+      fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+        .then(function (res) {
+          if (!res.ok) throw new Error('send failed');
+          window.location.href = 'thanks.html';
+        })
+        .catch(function () {
+          btn.disabled = false;
+          say("Couldn't send your request. Try again, or message us on WhatsApp.",
+              'لم نتمكن من إرسال طلبك. حاول مرة أخرى أو راسلنا على واتساب.');
+        });
+    });
+  });
+
   // Header border on scroll
   if (header) {
     var onScroll = function () { header.classList.toggle('scrolled', window.scrollY > 8); };
