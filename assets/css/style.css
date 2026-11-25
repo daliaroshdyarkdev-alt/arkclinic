@@ -1071,3 +1071,58 @@ html[dir="rtl"] .save-strip { padding: 14px 14px 14px 24px; }
   .seg-pill label { padding: 8px 14px; }
   .save-strip { align-items: flex-start; }
 }
+
+/* ---------- Talk to us (contact) ---------- */
+.talk { display: grid; gap: 16px; }
+.talk-card { position: relative; overflow: hidden; isolation: isolate; padding: 28px; border-radius: 28px; border: 1px solid var(--line); background: linear-gradient(180deg, var(--blue-soft) 0%, var(--surface) 55%); box-shadow: var(--shadow); }
+.talk-card::before { content: ""; position: absolute; z-index: -1; width: 240px; height: 240px; inset-block-start: -120px; inset-inline-end: -90px; border-radius: 50%; border: 30px solid var(--blue); opacity: .06; }
+.talk-head { margin-bottom: 18px; }
+.talk-head h3 { font-size: 28px; font-weight: 700; }
+.talk-head p { font-size: 15.5px; margin-top: 4px; }
+.talk-row { display: flex; align-items: center; gap: 16px; padding: 12px; margin: 0 -12px; border-radius: 18px; transition: background .2s ease; }
+.talk-row + .talk-row { margin-top: 4px; }
+.talk-row:hover { background: var(--surface); box-shadow: 0 0 0 1px var(--line); }
+.talk-tile { width: 56px; height: 56px; border-radius: 18px; }
+.talk-tile svg { width: 26px; height: 26px; }
+.talk-row:hover .talk-tile { transform: rotate(-4deg) scale(1.04); }
+.talk-tile { transition: transform .25s ease; }
+.talk-txt { flex: 1; min-width: 0; }
+.talk-txt b { display: block; font-size: 16px; font-weight: 600; color: var(--ink); }
+.talk-txt span { display: block; font-size: 14.5px; color: var(--ink-2); overflow-wrap: anywhere; }
+.talk-txt .ltr { direction: ltr; unicode-bidi: isolate; text-align: start; }
+.talk-go { flex: none; width: 20px; height: 20px; color: var(--muted); transition: transform .2s ease, color .2s ease; }
+.talk-row:hover .talk-go { color: var(--ink); transform: translate(2px, -2px); }
+[dir="rtl"] .talk-row:hover .talk-go { transform: scaleX(-1) translate(2px, -2px); }
+.talk-social { display: flex; gap: 10px; margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line); }
+.talk-social a { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px 8px 8px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); font-size: 14px; font-weight: 600; color: var(--ink); transition: border-color .2s; }
+[dir="rtl"] .talk-social a { padding: 8px 8px 8px 14px; }
+.talk-social a:hover { border-color: var(--ink); }
+.talk-social svg { width: 26px; height: 26px; }
+
+/* "Built by Arkdev" strip */
+.talk-brand { display: flex; align-items: center; gap: 16px; padding: 18px 20px; border-radius: 24px; background: var(--ink); color: #fff; position: relative; overflow: hidden; isolation: isolate; }
+.talk-brand::after { content: ""; position: absolute; z-index: -1; width: 220px; height: 220px; inset-block-end: -140px; inset-inline-end: -60px; border-radius: 50%; background: radial-gradient(circle, rgba(232,87,30,.45), rgba(232,87,30,0) 70%); }
+.talk-mark { flex: none; width: 52px; height: 46px; padding: 6px; border-radius: 14px; background: rgba(255,255,255,.08); }
+.talk-brand-txt { flex: 1; min-width: 0; }
+.talk-brand-txt b { display: block; font-size: 15.5px; }
+.talk-brand-txt span { display: block; font-size: 13.5px; color: #C9CDD6; }
+.talk-brand-go { flex: none; display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; font-weight: 600; color: #F5B46A; }
+.talk-brand-go svg { width: 18px; height: 18px; color: #F5B46A; }
+.talk-brand:hover .talk-brand-go svg { transform: translate(2px, -2px); }
+[dir="rtl"] .talk-brand:hover .talk-brand-go svg { transform: scaleX(-1) translate(2px, -2px); }
+
+/* Footer Arkdev link */
+.footer-ark { display: inline-flex; align-items: center; gap: 4px; font-weight: 600; color: #C8281A !important; }
+.footer-ark svg { width: 15px; height: 15px; }
+.copy a { color: var(--ink-2); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.copy a:hover { color: #C8281A; }
+
+@media (max-width: 720px) {
+  .talk-card { padding: 22px 18px; border-radius: 24px; }
+  .talk-head h3 { font-size: 24px; }
+  .talk-row { gap: 12px; }
+  .talk-tile { width: 48px; height: 48px; border-radius: 15px; }
+  .talk-tile svg { width: 22px; height: 22px; }
+  .talk-brand { flex-wrap: wrap; }
+  .talk-brand-go { width: 100%; padding-inline-start: 68px; }
+}

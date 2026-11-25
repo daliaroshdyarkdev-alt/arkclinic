@@ -71,8 +71,8 @@
         })
         .catch(function () {
           btn.disabled = false;
-          say("Couldn't send your request. Try again, or message us on WhatsApp.",
-              'لم نتمكن من إرسال طلبك. حاول مرة أخرى أو راسلنا على واتساب.');
+          say("Couldn't send your request. Try again, or email us at egypt@arkdev.net.",
+              'لم نتمكن من إرسال طلبك. حاول مرة أخرى أو راسلنا على egypt@arkdev.net.');
         });
     });
   });

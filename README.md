@@ -21,9 +21,8 @@ To publish a change: `git add .` → `git commit -m "what changed"` → `git pus
 If the stylesheet or script changes, bump the `?v=` number on their links so visitors get the new version.
 
 ## Replace before going live
-- Phone / WhatsApp: search for `201000000000`, `+20 100 000 0000`, `+20 2 0000 0000`
-- Email: `hello@arkclinic.com`
-- Office address: "Fifth Settlement, New Cairo"
+- Contact (Talk to us) uses Arkdev details from arkdev.net: egypt@arkdev.net and the Heliopolis office. Arkdev's site lists no phone or WhatsApp number — add one to the Talk to us panel when you have it
+- Support WhatsApp buttons inside the app pages still use the placeholder `201000000000`
 - The three reviews (moving strip on the home page) — these are placeholders; use real quotes with permission
 - Prices: 599 / 1,299 / 2,499 EGP a month (yearly 5,990 / 12,990 / 24,990); add-ons 199 per extra doctor, 599 per extra branch. Also in `signup.html`
 - Promises in the **Privacy** section (encryption, daily backup, doctor-only notes, staff roles) and the

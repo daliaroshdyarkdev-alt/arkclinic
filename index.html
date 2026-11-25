@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=25">
-  <script src="assets/js/main.js?v=3" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=26">
+  <script src="assets/js/main.js?v=4" defer></script>
 </head>
 <body>
 
@@ -721,27 +721,48 @@
         </div>
       </form>
 
-      <div id="contact">
-        <h3 class="contact-title" data-ar="تواصل معنا">Talk to us</h3>
-        <p class="contact-sub" data-ar="بنرد خلال ساعة، من السبت إلى الخميس.">We reply within the hour, Saturday to Thursday.</p>
-        <div class="contact-list">
-          <a class="contact-item" href="https://wa.me/201000000000" target="_blank" rel="noopener">
-            <span class="icon" style="background:#E7F9EE"><svg viewBox="0 0 24 24"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z" fill="#25D366"/><path d="M9.3 8.7c.2-.5.5-.6.8-.6h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2.1.4 0 .6l-.5.6c-.1.2-.2.3 0 .6.4.7 1 1.3 1.6 1.7.3.2.6.3.8.1l.6-.7c.2-.2.3-.2.5-.1l1.5.7c.3.1.4.2.4.4 0 .7-.4 1.4-1.1 1.6-.8.3-2 .2-3.6-.8-1.5-1-2.6-2.4-3-3.5-.3-.9-.1-1.9.3-2.4z" fill="#fff"/></svg></span>
-            <div><strong data-ar="واتساب">WhatsApp</strong><span class="ltr">+20 100 000 0000</span></div>
+      <div id="contact" class="talk">
+        <div class="talk-card">
+          <div class="talk-head">
+            <h3 data-ar="تواصل معنا">Talk to us</h3>
+            <p data-ar="فريق آرك ديف في القاهرة جاهز يساعدك.">Our Arkdev team in Cairo is here to help.</p>
+          </div>
+
+          <a class="talk-row" href="mailto:egypt@arkdev.net" style="--t1:#7C95F2;--t2:#3B5BDB">
+            <span class="p-tile talk-tile"><svg viewBox="0 0 24 24" class="ic"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg></span>
+            <span class="talk-txt"><b data-ar="البريد الإلكتروني">Email</b><span class="ltr">egypt@arkdev.net</span></span>
+            <svg viewBox="0 0 24 24" class="ic talk-go flip" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
           </a>
-          <a class="contact-item" href="tel:+20200000000">
-            <span class="icon"><svg viewBox="0 0 24 24" class="ic"><path d="M5 4h3.5l1.5 4-2.2 1.4a11 11 0 0 0 4.8 4.8L14 12l4 1.5V17a2 2 0 0 1-2 2A13 13 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>
-            <div><strong data-ar="اتصل بنا">Call us</strong><span class="ltr">+20 2 0000 0000</span></div>
+
+          <a class="talk-row" href="https://www.google.com/maps/search/?api=1&amp;query=82B+Abdel+Aziz+Fahmy+St%2C+Heliopolis%2C+Cairo%2C+Egypt" target="_blank" rel="noopener" style="--t1:#E3AE6A;--t2:#B4762A">
+            <span class="p-tile talk-tile"><svg viewBox="0 0 24 24" class="ic"><path d="M12 21s7-6.2 7-11.5a7 7 0 0 0-14 0C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+            <span class="talk-txt"><b data-ar="مكتبنا في القاهرة">Our Cairo office</b><span data-ar="82ب شارع عبد العزيز فهمي، مصر الجديدة، القاهرة">82B Abdel Aziz Fahmy St., Heliopolis, Cairo</span></span>
+            <svg viewBox="0 0 24 24" class="ic talk-go flip" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
           </a>
-          <a class="contact-item" href="mailto:hello@arkclinic.com">
-            <span class="icon"><svg viewBox="0 0 24 24" class="ic"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg></span>
-            <div><strong data-ar="البريد الإلكتروني">Email</strong><span class="ltr">hello@arkclinic.com</span></div>
+
+          <a class="talk-row" href="https://www.arkdev.net/lets-partner-together" target="_blank" rel="noopener" style="--t1:#A596F4;--t2:#6450D6">
+            <span class="p-tile talk-tile"><svg viewBox="0 0 24 24" class="ic"><path d="M4.5 19.5l1.1-3.6A8 8 0 1 1 8.4 18.6z"/><path d="M9 10h6M9 13.5h4"/></svg></span>
+            <span class="talk-txt"><b data-ar="ابعتلنا رسالة">Send us a message</b><span data-ar="نموذج التواصل على موقع آرك ديف">Contact form on arkdev.net</span></span>
+            <svg viewBox="0 0 24 24" class="ic talk-go flip" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
           </a>
-          <div class="contact-item">
-            <span class="icon"><svg viewBox="0 0 24 24" class="ic"><path d="M12 21s7-6.2 7-11.5a7 7 0 0 0-14 0C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
-            <div><strong data-ar="مكتبنا">Our office</strong><span data-ar="التجمع الخامس، القاهرة الجديدة">Fifth Settlement, New Cairo</span></div>
+
+          <div class="talk-social">
+            <a href="https://www.linkedin.com/company/ark-dev/" target="_blank" rel="noopener" aria-label="Arkdev on LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" fill="#0A66C2"/><path d="M7 10v7M7 7v.01M11 17v-7M11 13a3 3 0 0 1 6 0v4" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.facebook.com/thearkdevians/" target="_blank" rel="noopener" aria-label="Arkdev on Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" fill="#1877F2"/><path d="M15.5 7.5h-1.8c-1.3 0-2.2.9-2.2 2.2V22M9 13h6" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+              <span>Facebook</span>
+            </a>
           </div>
         </div>
+
+        <a class="talk-brand" href="https://www.arkdev.net/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 90 80" fill="none" aria-hidden="true" class="talk-mark"><defs><linearGradient id="ark-pulse-talk" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#7A140E"/><stop offset=".35" stop-color="#C8281A"/><stop offset=".7" stop-color="#E8571E"/><stop offset="1" stop-color="#F5A623"/></linearGradient></defs><path d="M4 56H24L31 38L40 74L48 48L53 56H62C80 56 88 32 76 16C68 6 52 4 40 10" stroke="url(#ark-pulse-talk)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="40" cy="10" r="5" fill="#F5A623"/></svg>
+          <span class="talk-brand-txt"><b data-ar="آرك كلينك من آرك ديف">ArkClinic is built by Arkdev</b><span data-ar="شركة برمجيات مدعومة بالذكاء الاصطناعي من القاهرة.">An AI-powered software house from Cairo.</span></span>
+          <span class="talk-brand-go"><span>arkdev.net</span><svg viewBox="0 0 24 24" class="ic talk-go flip" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+        </a>
       </div>
     </div>
   </div>
@@ -760,8 +781,9 @@
       <a href="#pricing" data-ar="الأسعار">Pricing</a>
       <a href="#demo" data-ar="اطلب عرضًا">Request demo</a>
       <a href="login.html" data-ar="دخول العيادات">Clinic login</a>
+      <a class="footer-ark" href="https://www.arkdev.net/" target="_blank" rel="noopener"><span data-ar="آرك ديف">Arkdev</span><svg viewBox="0 0 24 24" class="ic flip" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
     </nav>
-    <p class="copy" data-ar="© 2026 آرك كلينك. صُنع في مصر.">© 2026 ArkClinic. Made in Egypt.</p>
+    <p class="copy" data-ar="© 2026 آرك كلينك. صُنع في مصر بواسطة &lt;a href=&quot;https://www.arkdev.net/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;آرك ديف&lt;/a&gt;.">© 2026 ArkClinic. Made in Egypt by <a href="https://www.arkdev.net/" target="_blank" rel="noopener">Arkdev</a>.</p>
   </div>
 </footer>
 
