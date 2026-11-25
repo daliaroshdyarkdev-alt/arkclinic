@@ -24,7 +24,7 @@ If the stylesheet or script changes, bump the `?v=` number on their links so vis
 - Phone / WhatsApp: search for `201000000000`, `+20 100 000 0000`, `+20 2 0000 0000`
 - Email: `hello@arkclinic.com`
 - Office address: "Fifth Settlement, New Cairo"
-- Key numbers (150+, 40K, 35%, 4.9) and the three reviews — these are placeholders
+- The three reviews (moving strip on the home page) — these are placeholders; use real quotes with permission
 - Prices: 450 / 950 / 1,750 EGP
 - Promises in the **Privacy** section (encryption, daily backup, doctor-only notes, staff roles) and the
   **Switching is free** section (free data move, ready in 48 hours, training) — only keep what you really offer

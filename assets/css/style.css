@@ -254,26 +254,60 @@ html[lang="ar"] .art-money .amount { text-align: end; }
 .toast small { font-size: 12px; color: var(--muted); }
 
 
-/* Numbers */
-.numbers { background: var(--ink); color: #fff; padding: 88px 0; position: relative; overflow: hidden; }
-.numbers::after { content: ""; position: absolute; inset-block-end: -260px; inset-inline-start: -160px; width: 560px; height: 560px; border-radius: 50%; background: radial-gradient(circle, rgba(59,91,219,.35), rgba(59,91,219,0) 70%); }
-.numbers .wrap { position: relative; z-index: 1; }
-.numbers h2 { color: #fff; font-size: clamp(32px, 4vw, 46px); font-weight: 700; text-align: center; margin-bottom: 56px; }
-.stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-.stat { text-align: center; padding: 8px; }
-.stat strong { display: block; font-family: "Fraunces", Georgia, serif; font-size: clamp(44px, 5vw, 64px); font-weight: 700; line-height: 1; color: #fff; direction: ltr; }
-.stat span { display: block; margin-top: 12px; color: #C9CDD6; font-size: 16px; }
-
-/* Reviews */
-.reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.review { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; display: flex; flex-direction: column; gap: 22px; }
+/* Reviews — 7 cards, rotates one card at a time, with dots */
+.section-tight { padding: 80px 0; }
+.rv-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px 40px; flex-wrap: wrap; margin-bottom: 32px; }
+.rv-head h2 { font-size: clamp(30px, 3.4vw, 42px); font-weight: 700; max-width: 18ch; }
+.rv-score { display: flex; align-items: center; gap: 12px; color: var(--ink-2); font-size: 15px; }
 .stars { display: flex; gap: 3px; color: #D7A14B; }
 .stars svg { width: 18px; height: 18px; }
-.review blockquote { margin: 0; font-size: 18px; line-height: 1.55; color: var(--ink); flex: 1; }
-.review .who { display: flex; align-items: center; gap: 12px; }
-.review .avatar { width: 44px; height: 44px; font-size: 15px; }
-.review .who strong { display: block; font-size: 16px; }
-.review .who span { font-size: 14px; color: var(--muted); }
+
+.rv-carousel { --card: 380px; --gap: 16px; --pad: max(24px, calc((100% - var(--wrap)) / 2 + 24px)); }
+.rv-viewport { overflow: hidden; padding: 6px 0 10px; padding-inline-start: var(--pad);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 var(--pad), #000 calc(100% - 64px), transparent);
+          mask-image: linear-gradient(90deg, transparent 0, #000 var(--pad), #000 calc(100% - 64px), transparent); }
+[dir="rtl"] .rv-viewport {
+  -webkit-mask-image: linear-gradient(270deg, transparent 0, #000 var(--pad), #000 calc(100% - 64px), transparent);
+          mask-image: linear-gradient(270deg, transparent 0, #000 var(--pad), #000 calc(100% - 64px), transparent); }
+.rv-track { display: flex; gap: var(--gap); width: max-content; transition: transform .75s cubic-bezier(.65, 0, .35, 1); will-change: transform; }
+.rv-track.no-anim { transition: none; }
+
+.rv { flex: none; width: var(--card); margin: 0; padding: 24px 26px; border-radius: 22px; border: 1px solid var(--line); background: var(--surface); display: flex; flex-direction: column; justify-content: space-between; gap: 18px; }
+.rv.rv-blue { background: var(--blue-soft); border-color: transparent; }
+.rv.rv-dark { background: var(--ink); border-color: var(--ink); }
+.rv blockquote { margin: 0; font-size: 17px; line-height: 1.5; color: var(--ink); }
+.rv figcaption { display: flex; align-items: center; gap: 12px; }
+.rv .avatar { width: 38px; height: 38px; font-size: 13px; flex: none; }
+.rv b { display: block; font-size: 15px; font-weight: 600; }
+.rv small { display: block; font-size: 13px; color: var(--muted); }
+.rv.rv-dark blockquote, .rv.rv-dark b { color: #fff; }
+.rv.rv-dark small { color: #AEB3BD; }
+.rv.rv-dark .avatar { background: rgba(255,255,255,.12); color: #fff; }
+
+/* Dots under the cards */
+.rv-dots { display: flex; justify-content: center; gap: 2px; margin-top: 22px; }
+.rv-dots button { height: 24px; padding: 0 3px; border: 0; background: none; cursor: pointer; display: grid; place-items: center; }
+.rv-dots button::before { content: ""; display: block; width: 8px; height: 8px; border-radius: 999px; background: #D3CEC4; transition: width .35s ease, background .35s ease; }
+.rv-dots button.on::before { width: 28px; background: var(--ink); }
+.rv-dots button:hover::before { background: #A9A397; }
+.rv-dots button.on:hover::before { background: var(--ink); }
+.rv-dots button:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-radius: 8px; }
+
+/* Phones: one card at a time, rotating upward */
+@media (max-width: 720px) {
+  .section-tight { padding: 64px 0; }
+  .rv-carousel { --gap: 12px; }
+  .rv-viewport { padding: 0 16px; height: 246px;
+    -webkit-mask-image: linear-gradient(180deg, #000 0, #000 calc(100% - 44px), transparent);
+            mask-image: linear-gradient(180deg, #000 0, #000 calc(100% - 44px), transparent); }
+  [dir="rtl"] .rv-viewport {
+    -webkit-mask-image: linear-gradient(180deg, #000 0, #000 calc(100% - 44px), transparent);
+            mask-image: linear-gradient(180deg, #000 0, #000 calc(100% - 44px), transparent); }
+  .rv-track { flex-direction: column; width: auto; }
+  .rv { width: auto; height: 204px; padding: 20px; }
+  .rv blockquote { font-size: 16px; }
+  .rv-dots { margin-top: 12px; }
+}
 
 /* Pricing */
 .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; }
@@ -540,11 +574,10 @@ html[dir="rtl"] .switch input:checked + span::before { transform: translateX(-20
   .hero p { max-width: 40ch; }
   .hero-art { max-width: 560px; width: 100%; }
   .scene { max-width: 620px; }
-  .features, .reviews { grid-template-columns: 1fr 1fr; }
+  .features { grid-template-columns: 1fr 1fr; }
   .plans { grid-template-columns: 1fr; max-width: 520px; margin-inline: auto; }
   .plan.featured { transform: none; }
   .demo-grid { grid-template-columns: 1fr; }
-  .stat-grid { grid-template-columns: 1fr 1fr; gap: 40px 24px; }
   .grid-2 { grid-template-columns: 1fr; }
   .kpis { grid-template-columns: 1fr 1fr; }
   .app { grid-template-columns: 88px 1fr; }
@@ -600,11 +633,10 @@ html[dir="rtl"] .switch input:checked + span::before { transform: translateX(-20
   .donut::before { inset: 11px; }
   .section { padding: 72px 0; }
   .section-head { margin-bottom: 40px; }
-  .features, .reviews { grid-template-columns: 1fr; }
+  .features { grid-template-columns: 1fr; }
   .form-grid { grid-template-columns: 1fr; }
   .card { padding: 26px 20px; }
   .cta-band { padding-bottom: 72px; }
-  .stat-grid { gap: 32px 12px; }
 
   /* App on phones: sidebar becomes a bottom tab bar */
   .app { grid-template-columns: 1fr; }

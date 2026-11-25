@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=18">
-  <script src="assets/js/main.js?v=2" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=22">
+  <script src="assets/js/main.js?v=3" defer></script>
 </head>
 <body>
 
@@ -389,43 +389,48 @@
   </div>
 </section>
 
-<!-- ================= Key numbers ================= -->
-<section class="numbers" aria-label="Key numbers">
+<!-- ================= Reviews (7 cards, rotates one at a time) ================= -->
+<section class="section section-tight" id="reviews">
   <div class="wrap">
-    <h2 data-ar="عيادات في كل مصر تثق بنا">Trusted by clinics across Egypt</h2>
-    <div class="stat-grid">
-      <div class="stat"><strong>150+</strong><span data-ar="عيادة تستخدم آرك كلينك">clinics on ArkClinic</span></div>
-      <div class="stat"><strong>40K</strong><span data-ar="حجز كل شهر">bookings every month</span></div>
-      <div class="stat"><strong>35%</strong><span data-ar="غياب أقل للمرضى">fewer missed visits</span></div>
-      <div class="stat"><strong>4.9</strong><span data-ar="متوسط تقييم العملاء">average clinic rating</span></div>
+    <div class="rv-head">
+      <h2 data-ar="يحبه الأطباء وفريق الاستقبال">Loved by doctors and front desks</h2>
+      <div class="rv-score"><span class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></span><span data-ar="من عيادات في كل مصر">From clinics across Egypt</span></div>
     </div>
   </div>
-</section>
-
-<!-- ================= Reviews ================= -->
-<section class="section" id="reviews">
-  <div class="wrap">
-    <div class="section-head">
-      <h2 data-ar="يحبه الأطباء وفريق الاستقبال">Loved by doctors and front desks</h2>
-      <p data-ar="كلمات من عيادات انتقلت إلى آرك كلينك.">Words from clinics that made the switch.</p>
+  <div class="rv-carousel" data-carousel aria-roledescription="carousel" aria-label="Reviews">
+    <div class="rv-viewport">
+      <div class="rv-track">
+          <figure class="rv rv-white">
+            <blockquote data-ar="«قلّ الغياب من أول شهر. تذكيرات واتساب وحدها تستاهل الاشتراك.»">“Missed visits dropped in the first month. The WhatsApp reminders alone paid for it.”</blockquote>
+            <figcaption><span class="avatar ">HM</span><span><b data-ar="د. هاني مصطفى">Dr. Hany Mostafa</b><small data-ar="عيادة أسنان، مدينة نصر">Dental clinic, Nasr City</small></span></figcaption>
+          </figure>
+          <figure class="rv rv-blue">
+            <blockquote data-ar="«بقفل اليوم في خمس دقايق. النقدي وإنستاباي والـPOS كله مظبوط.»">“I close the day in five minutes. Cash, InstaPay and POS all add up.”</blockquote>
+            <figcaption><span class="avatar a2">RF</span><span><b data-ar="ريم فتحي">Reem Fathy</b><small data-ar="مديرة عيادة، الإسكندرية">Clinic manager, Alexandria</small></span></figcaption>
+          </figure>
+          <figure class="rv rv-dark">
+            <blockquote data-ar="«سهل لدرجة إن موظفة الاستقبال اشتغلت عليه من أول يوم. هادي ونضيف وسريع.»">“Simple enough for our receptionist on day one. Calm, clean and fast.”</blockquote>
+            <figcaption><span class="avatar a3">SE</span><span><b data-ar="د. سارة السيد">Dr. Sara El-Sayed</b><small data-ar="عيادة أطفال، المنصورة">Pediatric clinic, Mansoura</small></span></figcaption>
+          </figure>
+          <figure class="rv rv-white">
+            <blockquote data-ar="«المرضى بيحبوا تأكيد واتساب. التليفون بيرن أقل وصالة الانتظار أهدى.»">“Patients love the WhatsApp confirmations. The phone rings less and the waiting room is calmer.”</blockquote>
+            <figcaption><span class="avatar a4">MA</span><span><b data-ar="د. محمد عادل">Dr. Mohamed Adel</b><small data-ar="عيادة جلدية، الجيزة">Dermatology clinic, Giza</small></span></figcaption>
+          </figure>
+          <figure class="rv rv-blue">
+            <blockquote data-ar="«متابعات الحمل كانت في كشاكيل. دلوقتي كل أسبوع بنقرة واحدة.»">“Pregnancy follow-ups used to live in notebooks. Now every week is one click away.”</blockquote>
+            <figcaption><span class="avatar ">HS</span><span><b data-ar="د. هبة سمير">Dr. Heba Samir</b><small data-ar="عيادة نساء وتوليد، مصر الجديدة">OB/GYN clinic, Heliopolis</small></span></figcaption>
+          </figure>
+          <figure class="rv rv-dark">
+            <blockquote data-ar="«نقل شيت الإكسل القديم خد يوم واحد. الفريق عمل كل حاجة.»">“Moving our old Excel sheet took one day. The team did it all for us.”</blockquote>
+            <figcaption><span class="avatar a2">AN</span><span><b data-ar="أحمد نبيل">Ahmed Nabil</b><small data-ar="صاحب عيادة، طنطا">Clinic owner, Tanta</small></span></figcaption>
+          </figure>
+          <figure class="rv rv-white">
+            <blockquote data-ar="«بشوف دخل اليوم على موبايلي بعد شغل المستشفى. راحة بال حقيقية.»">“I see today’s income on my phone after my hospital shift. Real peace of mind.”</blockquote>
+            <figcaption><span class="avatar a3">KF</span><span><b data-ar="د. كريم فؤاد">Dr. Karim Fouad</b><small data-ar="عيادة عظام، أسيوط">Orthopedic clinic, Assiut</small></span></figcaption>
+          </figure>
+      </div>
     </div>
-    <div class="reviews">
-      <figure class="review">
-        <div class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></div>
-        <blockquote data-ar="«قلّ الغياب من أول شهر. تذكيرات واتساب وحدها تستاهل الاشتراك.»">“Missed visits dropped in the first month. The WhatsApp reminders alone paid for it.”</blockquote>
-        <figcaption class="who"><span class="avatar">HM</span><div><strong data-ar="د. هاني مصطفى">Dr. Hany Mostafa</strong><span data-ar="عيادة أسنان، مدينة نصر">Dental clinic, Nasr City</span></div></figcaption>
-      </figure>
-      <figure class="review">
-        <div class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></div>
-        <blockquote data-ar="«بقفل اليوم في خمس دقايق. النقدي وإنستاباي والـPOS كله مظبوط.»">“I close the day in five minutes. Cash, InstaPay and POS all add up.”</blockquote>
-        <figcaption class="who"><span class="avatar a2">RF</span><div><strong data-ar="ريم فتحي">Reem Fathy</strong><span data-ar="مديرة عيادة، الإسكندرية">Clinic manager, Alexandria</span></div></figcaption>
-      </figure>
-      <figure class="review">
-        <div class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></div>
-        <blockquote data-ar="«سهل لدرجة إن موظفة الاستقبال اشتغلت عليه من أول يوم. هادي ونضيف وسريع.»">“Simple enough for our receptionist on day one. Calm, clean and fast.”</blockquote>
-        <figcaption class="who"><span class="avatar a3">SE</span><div><strong data-ar="د. سارة السيد">Dr. Sara El-Sayed</strong><span data-ar="عيادة أطفال، المنصورة">Pediatric clinic, Mansoura</span></div></figcaption>
-      </figure>
-    </div>
+    <div class="rv-dots" aria-label="Choose a review"></div>
   </div>
 </section>
 
